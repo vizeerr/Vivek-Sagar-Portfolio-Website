@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="ae">
+        <h1>vivek</h1>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+        let wtd = gsap.timeline({
+            scrollTrigger:{
+                trigger:'.ae',
+                start:'center center',
+                end:'bottom center',
+               
+                markers:true,
+            }
+
+        })
+        wtd.to('.ae',{
+            y:200,
+        })
+
+    </script>
+</body>
+</html>

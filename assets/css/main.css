@@ -1,0 +1,698 @@
+/* roots */
+:root{
+    --primaryBG:#000;
+    --primCOL:#fff;
+    --themeCOL:#ffcf00;
+}
+
+body{
+    background: var(--primaryBG);
+    color: var(--primCOL);
+    margin: 0px;
+}
+
+/* NAVBAR */
+.navbar{
+  color: #fff;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 200;
+  letter-spacing: 2px;
+  padding: 10px 10px;
+  position: fixed;
+  width: 98%;
+  z-index: 5;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* first Section */
+
+.mainBanner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+}
+
+.mainBanner .nameTag{
+    font-family: 'Fleur De Leah', cursive;
+    font-size:20em;
+    z-index: -2;
+    color:  var(--themeCOL);
+    -webkit-animation: fadein 8s;
+    animation: fadein 8s;
+    margin: 0;
+    pointer-events: none;
+    text-shadow: 0 0 15px #d7a21a;
+    z-index: -2;
+}
+
+.mainBanner .primImg{
+    width: 65%;
+    filter: drop-shadow(0px 0px 50px black);
+    position: absolute;
+    align-self:flex-end;
+    z-index: 2;
+}
+
+  
+.heading{
+  font-size: 5em !important;
+  margin:  0;
+  /* text-decoration: overline; */
+  /* text-decoration-thickness: 2px; */
+  color: #ffffff !important;
+  font-weight: 400 !important;
+  border-bottom: 1px solid #ffffffb6;
+  backdrop-filter: blur(10px);
+  padding: 30px 0px 20px 20px ;
+  background: #00000054;
+  z-index: 2;
+  position: sticky;
+  top: 0;
+} 
+
+/* about Section */
+
+
+
+.aboutContainer{
+    /* height: 80vh; */
+    font-family: "Josefin Sans", sans-serif;
+    /* background: hsla(0, 0%, 0%, 0.19); */
+    backdrop-filter:blur(0px);
+    padding: 90px;
+    position: sticky;
+    top: 0;
+  }
+  .abouthead{
+    background: #0000 !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    padding: 0 !important;
+  }
+  .aboutContainer p{
+    /* margin: 0; */
+    font-size: 33px;
+    line-height: 2em;
+    /* letter-spacing: 2px; */
+    color: #ffffffbe;
+    font-weight: 300;
+  }
+  
+  .aboutContainer .readerHead{
+    color: var(--themeCOL);
+    font-weight: 400;
+  }
+
+  .subSection{
+    background: var(--primaryBG);
+    position: relative;
+    z-index: 2;
+    box-shadow: 0px -56px 83px 58px #000;
+    font-family: "Josefin Sans", sans-serif;
+    
+  }
+
+  /* What Section */
+  
+  .wtdContainer{
+    
+    position: relative;
+  }
+
+  .wtdContainer .mySwag{
+    margin: 150px 0;
+    padding: 0 80px;
+  }
+  .wtdContainer .mySwag ul {
+    list-style: none;
+    text-align: right;
+  }
+  .wtdContainer .mySwag ul li{
+    font-size: 7em;
+    margin: 80px 0;
+    color: #ffffff9b;
+    filter: blur(10px);
+    scale: 0.9;
+  }
+  .mySwag .active{
+    color: #fff !important;
+  }
+  .radialBox{
+    background: rgb(255, 0, 98);
+    width: 500px;
+    height: 300px;
+    position: absolute;
+    border-radius: 600px;
+    z-index: -2;
+    filter: blur(150px);
+    top: 45%;
+    left: 30%;
+  }
+
+  /* skills  */
+
+  .skillContainer{
+
+  }
+  .displayer{
+    position: absolute;
+    font-size: 15em;
+    font-weight: 600;
+    z-index: 5;  
+    width: 100%;
+    backdrop-filter: blur(2px);
+    text-align: center;
+    text-shadow: 0 0 50px #000;
+    color: #ffffff;
+    pointer-events: none;
+    opacity: 0;
+  }
+  .sectors{
+    padding: 0 80px;
+    margin: 80px 0 ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 0;
+  }
+
+  .lbox,.rbox{
+    z-index: 2;
+  }
+  
+  .clip-svg {
+    width: 0;
+    height: 0;
+  }
+  
+  .clip-caption {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    text-align: center;
+    color: #fff;
+    font-size: 13px;
+    text-transform: uppercase;
+  }
+  
+  .clip-each {
+    display: block;
+    position: relative;
+    -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    -webkit-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+    
+  
+  }
+  
+  .clip-each:hover{
+    background: #fff !important;
+  }
+  
+  .clip-each:hover::after{
+    background: #fff !important;
+  }
+  
+  
+  .clip-each:hover .clip-caption{
+    
+    color: #000;
+  }
+  
+  
+  .clip-border {
+    background: rgb(222, 0, 103);
+    animation: borderlight 15s linear infinite;
+    animation-fill-mode: both;
+    width: 130px;
+    height: 140px;
+    color: #222;
+  }
+  
+
+  
+  @keyframes borderlight {
+    0%{
+      background: rgb(222, 0, 103);
+      
+    }
+    15%{
+     background: rgb(194, 0, 233);
+     
+    }
+    40%{
+      background: rgb(233, 171, 0);
+      
+    }
+    60%{
+      background: rgb(0, 233, 225);
+    }
+    80%{
+      background: rgb(0, 233, 109);
+    }
+    100%{
+      background: rgb(222, 0, 103);
+    }
+  }
+  
+  
+  .clip-border::after {
+    content: "";
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    right: 2%;
+    bottom: 2%;
+    background: black;
+    -webkit-transition: all 0.2s linear;
+    transition: all 0.2s ease-in;
+    -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    z-index: -1;
+  }
+  
+  .item{
+    width: 38%;
+    transition: 0.2s ease-in;
+    background: #000;
+  
+  }
+  .clip-caption img{
+    transition: 0.1s ease-in;
+    pointer-events: none;
+  }
+  .clip-each:hover .clip-caption img{
+    filter: invert(1);
+  }
+  
+  .rohm{
+    display: flex;
+    /* justify-content: center; */
+    flex-wrap: wrap;
+  }
+  
+  .hexas{
+    display: flex;
+    column-gap: 20px;
+  }
+  
+
+
+  /* Project Section */
+
+  .projContainer{
+    
+    position: relative;
+    font-family: "Josefin Sans", sans-serif;
+  }
+
+
+  .projector{
+    position: absolute;
+    font-size: 10em;
+    font-weight: 600;
+    z-index: 5;  
+    width: 100%;
+    backdrop-filter: blur(2px);
+    text-align: center;
+
+    pointer-events: none;
+    opacity: 0;
+    text-shadow: -2px 7px 21px #ffeb0099;
+    color: #fff1d8;
+    /* transform:rotate3d(6, 3, -2, 25deg); */
+  }
+
+  .projHead{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    color: #ffffffa6;
+  }
+
+  .projSnap{  
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    margin: 100px 0 ;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .projCard{
+    margin: 0 80px;
+  }
+  
+  .projCard img{
+    width: 1000px;
+    border-radius: 20px;
+  }
+
+  /* journey section  */
+  
+  .jourContainer{
+
+    position: relative;
+    font-family: "Josefin Sans", sans-serif;
+    
+  }
+
+  .jElement{
+    padding: 0px 80px ;
+    padding: 80px ;
+    margin: 100px 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    row-gap: 15em;
+  }
+
+  .jTItle{
+    font-size: 6em;
+    font-weight: 600;
+    width: 100%;
+    margin: 0;
+  }
+
+  .jSub{
+    font-size: 22px;
+    
+  }
+
+  .jTime{
+    font-size: 30em;
+    z-index: -3;
+    position: absolute;
+    color: #ffffff1c;
+    filter: blur(2px);
+ 
+  }
+  .jCard{
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+  }
+
+  .rJ{
+    justify-content: flex-end;
+    text-align: right;
+  }
+
+  .bodyTime{
+    width: 50%;
+  }
+
+
+
+  /* certificate */
+
+  .certifContainer{
+    position: relative;
+  }
+  .certifElem{
+    padding: 60px 80px;
+
+  }
+  .certifElem ul{
+    list-style: none;
+    padding: 0;
+
+  }
+  .certifElem ul li{
+    /* margin: 30px 0; */
+    border-bottom: 1px solid #aaa;
+    padding: 55px 0;
+    color: #ffffff64;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: 0.3s ease-in-out;
+  }
+  .certifElem ul li .elehead{
+    font-size: 5em;
+    font-weight: 600;
+    margin: 0;
+    transition: 0.3s ease-in-out;
+  }
+  .certifElem ul li:hover .elehead{
+    color: rgb(215, 0, 68);
+
+  }
+
+  
+  .certifElem ul li .img {
+    width: 550px;
+    border-radius: 15px;
+    position: absolute;
+    opacity: 0;
+    z-index: 2;
+    box-shadow: 0 0 50px 10px #000;
+    pointer-events: none;
+  }
+
+
+  .bg-circle_hero2 {
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 0, 0, 0);
+    background-image: linear-gradient(318deg, var(--dark-color) 13%, #5132ff);
+    border: 1px #e3b3ff;
+    border-radius: 100%;
+    margin-top: 0;
+    margin-left: 0;
+    transition: all .5s;
+    position: relative;
+    left: auto;
+    box-shadow: 10px 10px 120px 20px rgba(56,48,227,.41);
+}
+
+.bg-circle-8 {
+  z-index: 0;
+  width: 100px;
+  height: 100px;
+  background-color: rgba(255, 0, 0, 0);
+  background-image: linear-gradient(318deg, #ff745e, #5132ff);
+  border: 1px #e3b3ff;
+  border-radius: 100%;
+  margin-top: -521px;
+  margin-left: 1074px;
+  position: absolute;
+  left: 0;
+}
+
+
+.leafSet{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0; 
+  pointer-events: none !important;
+  overflow: hidden;
+  
+}
+
+.mainContainer{
+
+  position: relative;
+  top: 0;
+}
+
+.leafSet div img{
+box-shadow: #000;
+}
+
+.lset1 div{
+position: absolute;
+display: block;
+top:110%;
+}
+
+.lset1 div:nth-child(1){
+  left: 18%;
+  animation: anileaf 16s linear infinite;
+  animation-delay: -7s;
+  
+}
+.lset1 div:nth-child(2){
+  left: 55%;
+  animation: anileaf 8s linear infinite;
+  animation-delay: -3s;
+}
+
+.lset1  div:nth-child(3){
+  left: 90%;
+  animation: anileaf 6s linear infinite;
+  animation-delay: -1s;
+}
+.lset1  div:nth-child(4){
+  left: 70%;
+  animation: anileaf 15s linear infinite;
+  animation-delay: -5s;
+}
+.lset1 div:nth-child(5){
+  left: 60%;
+  animation: anileaf 18s linear infinite;
+  animation-delay: 2s;
+}
+
+.lset1 div:nth-child(6){
+  left: 35%;
+  animation: anileaf 5s linear infinite;
+}
+.lset1 div:nth-child(7){
+  left: 40%;
+  animation: anileaf 13s linear infinite;
+}
+.lset1 div:nth-child(8){
+  left: 0%;
+  animation: anileaf 15s linear infinite;
+}
+
+.lset2{
+
+}
+.lset2 div{
+position: absolute;
+display: block;
+transform:rotateX(180deg);
+filter: blur(4px);
+scale: 0.8;
+}
+.lset2 div:nth-child(1){
+left: 10%;
+animation: anileaf 15s linear infinite;
+animation-delay: -7s;
+animation-direction: reverse;
+}
+.lset2 div:nth-child(2){
+left: 30%;
+animation: anileaf 20s linear infinite;
+animation-delay: -5s;
+animation-direction: reverse;
+}
+
+.lset2 div:nth-child(3){
+left: 60%;
+animation: anileaf 20s linear infinite;
+animation-delay: 0s;
+animation-direction: reverse;
+}
+.lset2 div:nth-child(4){
+left: 40%;
+animation: anileaf 15s linear infinite;
+animation-delay: -5s;
+animation-direction: reverse;
+}
+.lset2 div:nth-child(5){
+left: 75%;
+animation: anileaf 18s linear infinite;
+animation-delay: -10s;
+animation-direction: reverse;
+}
+
+.lset2 div:nth-child(6){
+left: 20%;
+animation: anileaf 12s linear infinite;
+animation-direction: reverse;
+}
+.lset2 div:nth-child(7){
+left: 5%;
+animation: anileaf 14s linear infinite;
+animation-direction: reverse;
+}
+.lset2 div:nth-child(8){
+left: 40%;
+animation: anileaf 15s linear infinite;
+animation-direction: reverse;
+}
+ 
+.lset3{
+z-index: -2;
+}
+.lset3 div{
+position: absolute;
+display: block;
+transform:rotateX(180deg);
+filter: blur(2px);  
+top:110%;
+
+}
+.lset3 div:nth-child(1){
+left: 0%;
+scale: 1.5;
+animation: anileaf 5s linear infinite;
+animation-delay: 5s;
+}
+.lset3 div:nth-child(2){
+left: 50%;
+animation: anileaf 10s linear infinite;
+scale: 2.5;
+animation-delay:12s;
+}
+
+.lset3 div:nth-child(3){
+left: 20%;
+scale: 1.5;
+animation: anileaf 7s linear infinite;
+animation-delay: 15s;
+}
+.lset3 div:nth-child(4){
+left: 80%;
+scale: 1.8;
+animation: anileaf 15s linear infinite;
+
+
+}
+
+
+@keyframes anileaf {
+  0%{
+    opacity: 0;
+    top:-10%;
+    transform: translateX(20px) rotate(0deg);
+  }
+  10%{
+    opacity: 1;
+  }
+  20%{
+    transform: translateX(-20px) rotate(45deg);
+  }
+  40%{
+    transform: translateX(-20px) rotate(90deg);
+  }
+  60%{
+    transform: translateX(20px) rotate(180deg);
+  }
+  80%{
+    transform: translateX(-20px) rotate(180deg);
+  }
+  100%{
+    top: 110%;
+    transform: translateX(-20px) rotate(225deg);
+
+  }
+}
+
