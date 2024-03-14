@@ -77,6 +77,7 @@ body{
   z-index: 2;
   position: sticky;
   top: 0;
+  font-family: "Marcellus", serif;
 } 
 
 /* about Section */
@@ -428,10 +429,14 @@ body{
   /* certificate */
 
   .certifContainer{
-    position: relative;
+    position: sticky;
+    top:0;
+    
   }
   .certifElem{
     padding: 60px 80px;
+    overflow: hidden;
+    position: relative;
 
   }
   .certifElem ul{
@@ -469,6 +474,7 @@ body{
     z-index: 2;
     box-shadow: 0 0 50px 10px #000;
     pointer-events: none;
+    display: none;
   }
 
 
@@ -696,3 +702,8 @@ animation: anileaf 15s linear infinite;
   }
 }
 
+/* wt ------------------------------------------------ */
+
+.wr{
+  color: #ffff00 !important; 
+}

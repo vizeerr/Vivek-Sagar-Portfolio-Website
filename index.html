@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Fleur+De+Leah&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Poiret+One&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Fleur+De+Leah&family=Marcellus&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Poiret+One&display=swap"
         rel="stylesheet">
 
     <!--Main Files-->
@@ -22,10 +22,11 @@
 </head>
 
 <body>
-    <!-- <div class="navbar">
-        <p>Vivek Sagar</p>
-        <p>MENU</p>
-    </div> -->
+    <div class="navbar">
+        <p>Currently Under Construction </p>
+        <p>Comming Soon</p>
+        <a class="wr" href="https://viveksagar.netlify.app/">See old portfolio</a>
+    </div>
     
     <div class="mainContainer" data-scroll-container>
         <div class="mainBanner">
@@ -388,6 +389,7 @@
         diff = e.clientX - rotate;
                 rotate = e.clientX;
         gsap.to(img, {
+            display:"block",
             opacity: 1,
             duration: 0.5,
             ease: Power1,
@@ -397,6 +399,7 @@
     });
     li.addEventListener("mouseleave", (e) => {
         gsap.to(img, {
+            display:"none",
             opacity: 0,
             duration: 0.5,
             ease: Power1
