@@ -12,27 +12,69 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Fleur+De+Leah&family=Marcellus&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Poiret+One&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Fleur+De+Leah&family=Protest+Revolution&family=Lobster&family=Marcellus&family=Amita:wght@400;700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Poiret+One&display=swap"
         rel="stylesheet">
 
     <!--Main Files-->
     <link rel="stylesheet" href="assets/css/main.css">
+    <!-- <script src="/assets/js/simulate.js"></script>  -->
 
 
 </head>
 
 <body>
-    <div class="navbar">
-        <p>Currently Under Construction </p>
-        <p>Comming Soon <a class="wr" href="https://viveksagar.netlify.app/">See old portfolio</a></p>
-        
-    </div>
+    <!-- <canvas id="renderSurface" ></canvas> -->
+    <!-- <script>
+    const canvas = document.getElementById('renderSurface');
+    const myFluid = new Fluid(canvas);
+    myFluid.mapBehaviors({
+    sim_resolution: 128,
+    dye_resolution: 512,
+    paused: false,
+    embedded_dither: true,
+    dissipation: .97,
+    velocity: .98,
+    pressure: .8,
+    pressure_iteration: 20,
+    curl: 0,
+    emitter_size: 0.5,
+
+    render_shaders: true,
+    multi_color: true,
+
+    render_bloom: false,
+    bloom_iterations: 8,
+    bloom_resolution: 256,
+    intensity: 0.8,
+    threshold: 0.6,
+    soft_knee: 0.7,
+    transparent: true
+});
+
+myFluid.activate();
+
+    </script>     -->
+
+        <div class="navbar">
+            <p>Currently Under Construction </p>
+            <p>Coming Soon <a class="wr" href="https://viveksagar.netlify.app/">See old portfolio</a></p>
+            
+        </div>
+
+    <!-- <div class="navbarpill">
+        <div class="pillbar">
+            <a href="/"><p>Home</p></a>
+            <a href="/"><p>About Me</p></a>
+            <a href="/"><p>What I Do</p></a>
+            <a href="/"><p>Contact Me</p></a>
+        </div>
+    </div> -->
     
     <div class="mainContainer" data-scroll-container>
         <div class="mainBanner">
             <img src="/assets/images/viveksagar.png" alt="" class="primImg" />
             <p class="nameTag">Vivek Sagar</p>
-            <div class="leafSet lset1"   >
+            <!-- <div class="leafSet lset1"   >
                 <div><img src="assets/images/leaves1.png"></div>
                 <div><img src="assets/images/leaves2.png"></div>
                 <div><img src="assets/images/leaves3.png"></div>
@@ -59,13 +101,13 @@
                 <div><img src="assets/images/leaves3.png"></div>
                 <div><img src="assets/images/leaves4.png"></div>
                 
-            </div>
+            </div> -->
         </div>
 
 
 
         <div class="aboutContainer" data-scroll-section>
-            <p class="heading abouthead">⤵ ABOUT ME</p>
+            <p class="heading abouthead">⤵ About Me</p>
             <p><span class="readerHead">Hi, I’m Vivek Sagar !</span> I specialise in crafting valuable, aesthetic
                 experiences through design. My unique background fuels my unconventional thinking, leading me to strive
                 for surprising and effective results in my designs.I specialise in crafting valuable, aesthetic
@@ -78,14 +120,15 @@
             
             <div class="wtdContainer" data-scroll-section>
                 <div class="radialBox"></div>
-                <p class="wtdhead heading" data-scroll data-scroll-sticky data-scroll-target=".wtdContainer">⤵ WHAT I DO
+                <p class="wtdhead heading" data-scroll data-scroll-sticky data-scroll-target=".wtdContainer">⤵ What I Do
                 </p>
                 <div class="mySwag">
                     <ul>
                         <li>WEB DEVELOPMENT</li>
                         <li>WEB DESIGNING</li>
                         <li>UI/UX DESIGNING</li>
-                        <li>WEB DEVELOPMENT</li>
+                        <li>APP DEVELOPMENT</li>
+                        <li>CREATIVE DEVELOPMENT</li>
 
 
                     </ul>
@@ -94,7 +137,7 @@
             </div>
 
             <div class="skillContainer">
-                <p class="skillhead heading">⤵ SKILLS I HAVE</p>
+                <p class="skillhead heading">⤵ Skills I Have</p>
                 <svg class="clip-svg">
                     <defs>
                         <clipPath id="hexagon-clip" clipPathUnits="objectBoundingBox">
@@ -112,25 +155,25 @@
                                 <div class="clip-caption"><img width="60" src="/assets/images/html.png" alt="HTML"></div>
                             </a>
                             <a href="#" class="clip-each clip-border">
-                                <div class="clip-caption"><img src="/assets/images/css.png" width="70" alt="CSS"></div>
+                                <div class="clip-caption"><img src="/assets/images/css.png" width="60" alt="CSS"></div>
                             </a>
                             <a href="#" class="clip-each clip-border">
-                                <div class="clip-caption"><img src="/assets/images/js.png" width="70" alt="JAVASCRIPT"></div>
+                                <div class="clip-caption"><img src="/assets/images/js.png" width="50" alt="JAVASCRIPT"></div>
                             </a>
                             <a href="#" class="clip-each clip-border">
-                                <div class="clip-caption"><img width="60" src="/assets/images/html5.png" alt=""></div>
+                                <div class="clip-caption"><img width="60" src="/assets/images/bootstrap.png" alt="BOOTSTRAP"></div>
                             </a>
                             <a href="#" class="clip-each clip-border">
-                                <div class="clip-caption"><img src="/assets/images/css.png" width="70" alt=""></div>
+                                <div class="clip-caption"><img src="/assets/images/express.png" width="50" alt="EXPRESS JS"></div>
                             </a>
                             <a href="#" class="clip-each clip-border">
-                                <div class="clip-caption"><img src="/assets/images/js.png" width="70" alt=""></div>
+                                <div class="clip-caption"><img src="/assets/images/java.png" width="50" alt="JAVA"></div>
                             </a>
                             <a href="#" class="clip-each clip-border">
-                                <div class="clip-caption"><img width="60" src="/assets/images/html5.png" alt=""></div>
+                                <div class="clip-caption"><img width="50" src="/assets/images/mongo.png" alt="MONGO DB"></div>
                             </a>
                             <a href="#" class="clip-each clip-border">
-                                <div class="clip-caption"><img src="/assets/images/css.png" width="70" alt=""></div>
+                                <div class="clip-caption"><img src="/assets/images/php.png" width="60" alt="PHP"></div>
                             </a>
 
                         </div>
@@ -139,25 +182,25 @@
 
                         <div class=" hexas">
                             <a href="#" class="clip-each clip-border">
-                                <div class="clip-caption"><img width="60" src="/assets/images/html5.png" alt=""></div>
+                                <div class="clip-caption"><img width="60" src="/assets/images/reactjs.png" alt="REACT JS"></div>
                             </a>
                             <a href="#" class="clip-each clip-border">
-                                <div class="clip-caption"><img src="/assets/images/css.png" width="70" alt=""></div>
+                                <div class="clip-caption"><img src="/assets/images/tailwind.png" width="70" alt="TAILWIND"></div>
                             </a>
                             <a href="#" class="clip-each clip-border">
-                                <div class="clip-caption"><img src="/assets/images/js.png" width="70" alt=""></div>
+                                <div class="clip-caption"><img src="/assets/images/sql.png" width="50" alt="MYSQL"></div>
                             </a>
                             <a href="#" class="clip-each clip-border">
-                                <div class="clip-caption"><img width="60" src="/assets/images/html5.png" alt=""></div>
+                                <div class="clip-caption"><img width="60" src="/assets/images/node.png" alt="NODE JS"></div>
                             </a>
                             <a href="#" class="clip-each clip-border">
-                                <div class="clip-caption"><img src="/assets/images/css.png" width="70" alt=""></div>
+                                <div class="clip-caption"><img src="/assets/images/joomla.png" width="50" alt="JOOMLA"></div>
                             </a>
                             <a href="#" class="clip-each clip-border">
-                                <div class="clip-caption"><img src="/assets/images/js.png" width="70" alt=""></div>
+                                <div class="clip-caption"><img src="/assets/images/wordpress.png" width="70" alt="WORDPRESS"></div>
                             </a>
                             <a href="#" class="clip-each clip-border">
-                                <div class="clip-caption"><img width="60" src="/assets/images/html5.png" alt=""></div>
+                                <div class="clip-caption"><img width="60" src="/assets/images/nextjs.png" alt="NEXT JS"></div>
                             </a>
 
 
@@ -167,28 +210,28 @@
 
                         <div class=" hexas">
                             <a href="#" class="clip-each clip-border">
-                                <div class="clip-caption"><img width="60" src="/assets/images/html5.png" alt=""></div>
+                                <div class="clip-caption"><img width="50" src="/assets/images/webflow.png" alt="WEBFLOW"></div>
                             </a>
                             <a href="#" class="clip-each clip-border">
-                                <div class="clip-caption"><img src="/assets/images/css.png" width="70" alt=""></div>
+                                <div class="clip-caption"><img src="/assets/images/figma.png" width="50" alt="FIGMA"></div>
                             </a>
                             <a href="#" class="clip-each clip-border">
-                                <div class="clip-caption"><img src="/assets/images/js.png" width="70" alt=""></div>
+                                <div class="clip-caption"><img src="/assets/images/photoshop.png" width="50" alt="PHOTOSHOP"></div>
                             </a>
                             <a href="#" class="clip-each clip-border">
-                                <div class="clip-caption"><img width="60" src="/assets/images/html5.png" alt=""></div>
+                                <div class="clip-caption"><img width="50" src="/assets/images/illustrator.png" alt="ILLUSTRATOR"></div>
                             </a>
                             <a href="#" class="clip-each clip-border">
-                                <div class="clip-caption"><img src="/assets/images/css.png" width="70" alt=""></div>
+                                <div class="clip-caption"><img src="/assets/images/python.png" width="50" alt="PYTHON"></div>
                             </a>
                             <a href="#" class="clip-each clip-border">
-                                <div class="clip-caption"><img src="/assets/images/js.png" width="70" alt=""></div>
+                                <div class="clip-caption"><img src="/assets/images/typescript.png" width="50" alt="TYPESCRIPT"></div>
                             </a>
                             <a href="#" class="clip-each clip-border">
-                                <div class="clip-caption"><img width="60" src="/assets/images/html5.png" alt=""></div>
+                                <div class="clip-caption"><img width="50" src="/assets/images/firebase.png" alt="FIREBASE"></div>
                             </a>
                             <a href="#" class="clip-each clip-border">
-                                <div class="clip-caption"><img src="/assets/images/css.png" width="70" alt=""></div>
+                                <div class="clip-caption"><img src="/assets/images/git.png" width="50" alt="GIT"></div>
                             </a>
 
                         </div>
@@ -196,23 +239,53 @@
                 </div>
             </div>
             <div class="projContainer">
-                <p class="projhead heading">⤵ PROJECTS</p>
+                <p class="projhead heading">⤵ Projects</p>
                 <div class="projSnap">
                     <p class="projector">JAVASCRIPT</p>
+                    <div class="projCard">
+                        <img src="/assets/images/tnm.png" alt="TECHSURGE FEST">
+                    </div>
+                    <div class="projCard">
+                        <img src="/assets/images/urban.png" alt="URBAN FINANCE">
+                    </div>
                     
                     <div class="projCard">
-                        <img src="/assets/images/Screenshot 2024-02-20 150709.png" alt="vivek">
+                        <img src="/assets/images/mythic.png" alt="MYTHIC MESH">
                     </div>
                     <div class="projCard">
-                        <img src="/assets/images/Screenshot 2024-02-20 135543.png" alt="sagar">
+                        <img src="/assets/images/remoncorp.png" alt="REMON FINANCE">
                     </div>
                     <div class="projCard">
-                        <img src="/assets/images/Screenshot 2024-02-20 135543.png" alt="">
+                        <img src="/assets/images/fivestar.png" alt="FIVESTAR">
                     </div>
+                    <div class="projCard">
+                        <img src="/assets/images/finfinitz.png" alt="FIN FINITZ">
+                    </div>
+                    <div class="projCard">
+                        <img src="/assets/images/quantam.png" alt="QUANTAM">
+                    </div>
+                    <div class="projCard">
+                        <img src="/assets/images/journal.png" alt="JOURNAL COLLEGE">
+                    </div>
+                    <div class="projCard">
+                        <img src="/assets/images/wakiilmart.png" alt="WAKILMART">
+                    </div>
+                    <div class="projCard">
+                        <img src="/assets/images/alumni.png" alt="ALLUMNI COLLEGE">
+                    </div>
+                    <div class="projCard">
+                        <img src="/assets/images/sagarsdrop.png" alt="SAGARS DROP">
+                    </div>
+                                        
+                    <div class="projCard">
+                        <img src="/assets/images/Screenshot 2024-02-20 150709.png" alt="CASSIOPEIA">
+                    </div>
+                    
+                    
                 </div>
             </div>
             <div class="jourContainer">
-                <p class="jourhead heading">⤵ JOURNEY</p>
+                <p class="jourhead heading">⤵ Journey</p>
                 
                 <div class="jElement">
                     <div class="jCard">
@@ -237,7 +310,7 @@
                 </div>
             </div>
             <div class="certifContainer">
-                <p class="certifhead heading">⤵ CERTIFICATES</p>
+                <p class="certifhead heading">⤵ Certificates</p>
                 <div class="certifElem">
                     <ul>
                         <li>
@@ -318,23 +391,14 @@
             duration: 2,
         })
 
-        // gsap.to(".primImg",{
-        //     // opacity:1,
-        //     scale:1.1,
-        //     duration:5,
-        // })
-
         const blurbar = document.querySelectorAll('.mySwag ul li');
         blurbar.forEach((e) => {
-
-
             let wtd = gsap.timeline({
                 scrollTrigger: {
                     trigger: e,
                     start: 'top 80%',
                     end: 'top 40%',
                     scrub: true,
-                    // markers:true,
                 }
 
             })
@@ -351,7 +415,7 @@
                     start: 'top 30%',
                     end: 'top 0%',
                     scrub: true,
-                    // markers:true,
+            
                 }
 
             })
@@ -497,7 +561,7 @@ let atd = gsap.timeline({
             })
 
             document.querySelectorAll('.hexas .clip-caption').forEach((hexa)=>{
-                hexa.addEventListener('mouseover',(e)=>{
+                hexa.addEventListener('mouseenter',(e)=>{
                     const name = e.target.querySelector('img').getAttribute('alt');
                     document.querySelector('.displayer').textContent = name;
                     gsap.to('.displayer',{
@@ -550,6 +614,10 @@ let atd = gsap.timeline({
                 //     })
                 // })
             })
+
+
+
+
     </script>
 
 

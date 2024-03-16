@@ -66,8 +66,6 @@ body{
 .heading{
   font-size: 5em !important;
   margin:  0;
-  /* text-decoration: overline; */
-  /* text-decoration-thickness: 2px; */
   color: #ffffff !important;
   font-weight: 400 !important;
   border-bottom: 1px solid #ffffffb6;
@@ -77,7 +75,7 @@ body{
   z-index: 2;
   position: sticky;
   top: 0;
-  font-family: "Marcellus", serif;
+  font-family: "Lobster", sans-serif;
 } 
 
 /* about Section */
@@ -85,14 +83,15 @@ body{
 
 
 .aboutContainer{
-    /* height: 80vh; */
-    font-family: "Josefin Sans", sans-serif;
-    /* background: hsla(0, 0%, 0%, 0.19); */
+    font-family: "Amita", serif;
+    background: hsla(0, 0%, 0%, 0.19);
     backdrop-filter:blur(0px);
     padding: 90px;
     position: sticky;
     top: 0;
+    word-spacing: 10px;
   }
+
   .abouthead{
     background: #0000 !important;
     box-shadow: none !important;
@@ -100,12 +99,10 @@ body{
     padding: 0 !important;
   }
   .aboutContainer p{
-    /* margin: 0; */
     font-size: 33px;
-    line-height: 2em;
-    /* letter-spacing: 2px; */
+    line-height: 2.2em;
     color: #ffffffbe;
-    font-weight: 300;
+    font-weight: 400;
   }
   
   .aboutContainer .readerHead{
@@ -113,19 +110,20 @@ body{
     font-weight: 400;
   }
 
+  /*scroll container */
+
   .subSection{
     background: var(--primaryBG);
     position: relative;
     z-index: 2;
     box-shadow: 0px -56px 83px 58px #000;
-    font-family: "Josefin Sans", sans-serif;
-    
+    font-family: "Marcellus", serif;
   }
+  
 
   /* What Section */
   
   .wtdContainer{
-    
     position: relative;
   }
 
@@ -143,12 +141,13 @@ body{
     color: #ffffff9b;
     filter: blur(10px);
     scale: 0.9;
+    font-family: "Protest Revolution", sans-serif;
   }
   .mySwag .active{
     color: #fff !important;
   }
   .radialBox{
-    background: rgb(255, 0, 98);
+    background: rgb(255, 62, 120);
     width: 500px;
     height: 300px;
     position: absolute;
@@ -162,6 +161,7 @@ body{
   /* skills  */
 
   .skillContainer{
+    
 
   }
   .displayer{
@@ -170,12 +170,12 @@ body{
     font-weight: 600;
     z-index: 5;  
     width: 100%;
-    backdrop-filter: blur(2px);
     text-align: center;
-    text-shadow: 0 0 50px #000;
+    text-shadow: 0 0 20px #ffc800;
     color: #ffffff;
     pointer-events: none;
     opacity: 0;
+    
   }
   .sectors{
     padding: 0 80px;
@@ -317,9 +317,8 @@ body{
   /* Project Section */
 
   .projContainer{
-    
     position: relative;
-    font-family: "Josefin Sans", sans-serif;
+
   }
 
 
@@ -329,14 +328,12 @@ body{
     font-weight: 600;
     z-index: 5;  
     width: 100%;
-    backdrop-filter: blur(2px);
     text-align: center;
-
     pointer-events: none;
     opacity: 0;
-    text-shadow: -2px 7px 21px #ffeb0099;
-    color: #fff1d8;
-    /* transform:rotate3d(6, 3, -2, 25deg); */
+    text-shadow: 0 0 20px #ffc800;
+    color: #ffffff;
+    font-family: "Protest Revolution", sans-serif;  
   }
 
   .projHead{
@@ -366,6 +363,7 @@ body{
     border-radius: 20px;
   }
 
+  
   /* journey section  */
   
   .jourContainer{
@@ -386,10 +384,11 @@ body{
   }
 
   .jTItle{
-    font-size: 6em;
+    font-size: 6.5em;
     font-weight: 600;
     width: 100%;
     margin: 0;
+    font-family: "Marcellus", serif;
   }
 
   .jSub{
@@ -478,35 +477,10 @@ body{
   }
 
 
-  .bg-circle_hero2 {
-    z-index: 5;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255, 0, 0, 0);
-    background-image: linear-gradient(318deg, var(--dark-color) 13%, #5132ff);
-    border: 1px #e3b3ff;
-    border-radius: 100%;
-    margin-top: 0;
-    margin-left: 0;
-    transition: all .5s;
-    position: relative;
-    left: auto;
-    box-shadow: 10px 10px 120px 20px rgba(56,48,227,.41);
-}
 
-.bg-circle-8 {
-  z-index: 0;
-  width: 100px;
-  height: 100px;
-  background-color: rgba(255, 0, 0, 0);
-  background-image: linear-gradient(318deg, #ff745e, #5132ff);
-  border: 1px #e3b3ff;
-  border-radius: 100%;
-  margin-top: -521px;
-  margin-left: 1074px;
-  position: absolute;
-  left: 0;
-}
+
+
+
 
 
 .leafSet{
@@ -706,4 +680,45 @@ animation: anileaf 15s linear infinite;
 
 .wr{
   color: #ffff00 !important; 
+}
+
+#renderSurface{
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  z-index: 3;
+}
+
+
+.zind{
+  z-index: 4;
+  position: relative;
+  pointer-events: none;
+}
+
+.navbarpill{
+  position: fixed;
+  bottom: 30px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  z-index: 8;
+}
+
+.pillbar{
+  display: flex;
+  column-gap: 20px;
+background: rgba(0, 0, 0, 0.604);
+padding: 5px 30px;
+border-radius: 80px;
+backdrop-filter: blur(10px);
+box-shadow: 0 0 15px 0 #ffffff38;
+
+}
+.pillbar a{
+  color: #fcfcfc;
+  text-decoration: none;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 600;
 }
