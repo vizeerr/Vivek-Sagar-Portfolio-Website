@@ -76,6 +76,7 @@ body{
   position: sticky;
   top: 0;
   font-family: "Lobster", sans-serif;
+  mix-blend-mode: color-dodge;
 } 
 
 /* about Section */
@@ -996,8 +997,9 @@ box-shadow: 0 0 15px 0 #ffffff38;
   font-size: 8em;
   margin: 0;
   text-align: center;
-
-  
+  display: flex;
+  align-items: center;
+  justify-content: center;  
 }
 .mvigct{
   display: inline-flex;
@@ -1015,7 +1017,8 @@ box-shadow: 0 0 15px 0 #ffffff38;
   border-bottom:1px solid;
   transform: translateX(1800px);
   /* background: rgb(11, 11, 11); */
-  color: rgba(255, 255, 255, 0.405);
+  color: rgba(255, 255, 255, 0.533);
+  /* mix-blend-mode: color-dodge; */
 }
 .contactform{
   text-align: center;
@@ -1034,14 +1037,14 @@ box-shadow: 0 0 15px 0 #ffffff38;
   word-spacing: 10px;
   font-family: "Josefin Sans", sans-serif;
   line-height: 2.5em;
-  color: #cbcbcb;
+  color: #d8d8d8;
 }
 
 .contactform input{
   
   background: #0000;
   border: none;
-  border-bottom: 2px solid #989898;
+  border-bottom: 2px solid #c4c4c4;
   width: 25%;
   outline: none;
   font-size: 3em;
@@ -1056,7 +1059,6 @@ box-shadow: 0 0 15px 0 #ffffff38;
   font-size: 12px;
   word-spacing: 1px;
   font-weight: 400;
- 
   
 }
 
@@ -1064,29 +1066,21 @@ box-shadow: 0 0 15px 0 #ffffff38;
   text-align: center;
   position: relative;
   overflow: hidden;
-  width: 100%;
   border: 2px solid #5a5a5a;
   border-radius: 50px;
-  margin: 150px 0 0 0;
+  margin: 150px 0 40px 0;
   width: 95%;
   height: 85vh;
   font-weight: 300;
   font-family: "Josefin Sans", sans-serif;
-  /* background: #1a1a1a; */
-  display: flex;
-  justify-content: space-between;
- 
-}
-.footerbottom div{
-  width: 100%;
+  background: #ffffff1d;
+  backdrop-filter: blur(25px);
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+ 
 }
-.footerbottom img{
-  width: 100%;
-  border-radius: 100px;
-  filter: brightness(0.8);
+
+.footerbottom .nameTag{
 
 }

@@ -128,7 +128,7 @@ myFluid.activate();
                 <div class="bgshape bgshape1"></div>
                 <div class="bgshape bgshape2"></div>
                 <div class="bgshape bgshape3"></div>
-                <div class="bgshape bgshape4"></div>
+                <!-- <div class="bgshape bgshape4"></div> -->
         
             </div>
             
@@ -381,7 +381,7 @@ myFluid.activate();
                 <div class="contactcont">
                     <div class="upct">
                         <p class="cthiibtn">SAY HI</p>
-                        <h1 class="cthead mvheadct"><img style="filter: invert(1) contrast(2); transform:rotate(180deg)" width="80" src="/assets/images/arrow-right-anim.gif" alt="">GET IN TOUCH</h1>
+                        <h1 class="cthead mvheadct"><img width="80" src="/assets/images/icons8-arrow-100.png" style="margin-right: 10px;" alt="">GET IN TOUCH</h1>
                         <h1 class="cthead mvheadct">WITH<span class="mvigct"><img  src="/assets/images/dog.gif" width="170" alt=""></span>ME</h1>
                     </div>
                     <p  class="scrollhell">HELLO <img src="/assets/images/hello.gif" width="230" alt="">  LET'S TALK  I'M STILL WAITING  <img src="/assets/images/wait.gif" width="230" alt="">   </p>
@@ -396,17 +396,12 @@ myFluid.activate();
                             <button type="submit">SEND</button>
                             
                         </form>
-                        <!-- <div class="footerbottom">
-                            <div>
-                                <p class="cthead">The Real ME</p>
-                                <p>Vivek Sagar</p>
-                            </div>
-                            <div>
-                                <img src="/assets/images/vivek.jpg" alt="" srcset="">
-                            </div>
-                             <p class="nameTag">Vivek Sagar</p> 
-                        </div> -->
+                        
                     </div>
+                    <div class="footerbottom">
+                            
+                        <p class="nameTag">Vivek Sagar</p> 
+                   </div>
                     
                 </div>
             </div>
@@ -601,6 +596,22 @@ myFluid.activate();
             })
 
             
+            // let footerbottom = gsap.timeline({
+            //     scrollTrigger: {
+            //         trigger: '.footerbottom',
+            //         start: 'top 50%',
+            //         end: 'top 0',
+            //         scrub: 1,
+            //         markers:true,
+                    
+            //     }
+
+            // })
+            // footerbottom.to('.footerbottom', {
+            //     width:'95%',
+            //     duration: 3,
+            // })
+
             
 
 
@@ -614,6 +625,7 @@ myFluid.activate();
                 scrub: 1,
                 duration:3,
                 end: () => "+=" + document.querySelector(".projSnap").offsetWidth,
+                
             }
         })
         
@@ -803,7 +815,7 @@ let atd = gsap.timeline({
 
 
 
-            gsap.set(".bgshape", { xPercent: -50, yPercent: -50 });
+            gsap.set(".bgshape", { xPercent: 0, yPercent: 0 });
 
   function randomPosition(min, max) {
     return Math.random() * (max - min) + min;
@@ -812,8 +824,8 @@ let atd = gsap.timeline({
   function animateShape(shape) {
     gsap.to(shape, {
       duration: 2,
-      x: randomPosition(-20, 90) +30+ '%',
-      y: randomPosition(-20, 90)+30 + '%',
+      x: randomPosition(-50, 90) + '%',
+      y: randomPosition(0, 100)+ '%',
       ease: "power1.inOut"
     });
   }
