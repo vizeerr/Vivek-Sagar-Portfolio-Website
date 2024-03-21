@@ -124,6 +124,14 @@ myFluid.activate();
 
         <div class="subSection">
             
+            <div class="bgmesh bgmeshsub justify-content-center d-inline-flex flex-row " >
+                <div class="bgshape bgshape1"></div>
+                <div class="bgshape bgshape2"></div>
+                <div class="bgshape bgshape3"></div>
+                <div class="bgshape bgshape4"></div>
+        
+            </div>
+            
             
             
             <div class="wtdContainer" data-scroll-section>
@@ -388,10 +396,18 @@ myFluid.activate();
                             <button type="submit">SEND</button>
                             
                         </form>
+                        <!-- <div class="footerbottom">
+                            <div>
+                                <p class="cthead">The Real ME</p>
+                                <p>Vivek Sagar</p>
+                            </div>
+                            <div>
+                                <img src="/assets/images/vivek.jpg" alt="" srcset="">
+                            </div>
+                             <p class="nameTag">Vivek Sagar</p> 
+                        </div> -->
                     </div>
-                    <div class="footerbottom">
-                        <p class="nameTag">Vivek Sagar</p>
-                    </div>
+                    
                 </div>
             </div>
 
@@ -560,6 +576,22 @@ myFluid.activate();
                 duration: 3,
             })
 
+            let bgmeshsub = gsap.timeline({
+                scrollTrigger: {
+                    trigger: '.subSection',
+                    start: 'top 80%',
+                    end: 'top 0%',
+                    scrub: 1,
+                    markers:true,
+                    
+                }
+
+            })
+            bgmeshsub.to('.bgmeshsub', {
+                opacity:1,
+                duration: 1,
+            })
+
             
             gsap.to('.scrollhell', {
                 x:-1250,
@@ -567,6 +599,8 @@ myFluid.activate();
                 repeat: -1
 
             })
+
+            
             
 
 

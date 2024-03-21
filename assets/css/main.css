@@ -120,6 +120,10 @@ body{
     box-shadow: 0px -56px 83px 58px #000;
     font-family: "Marcellus", serif;
   }
+  .bgmeshsub{
+    opacity: 0;
+    z-index: 3;
+  }
   
 
   /* What Section */
@@ -1017,8 +1021,12 @@ box-shadow: 0 0 15px 0 #ffffff38;
   text-align: center;
   padding: 0 20px;
   margin: 100px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-.contactform p{
+.contactform form p{
   font-size: 3em;
   margin: 0;
   display: inline-block;
@@ -1057,5 +1065,28 @@ box-shadow: 0 0 15px 0 #ffffff38;
   position: relative;
   overflow: hidden;
   width: 100%;
-  
+  border: 2px solid #5a5a5a;
+  border-radius: 50px;
+  margin: 150px 0 0 0;
+  width: 95%;
+  height: 85vh;
+  font-weight: 300;
+  font-family: "Josefin Sans", sans-serif;
+  /* background: #1a1a1a; */
+  display: flex;
+  justify-content: space-between;
+ 
+}
+.footerbottom div{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.footerbottom img{
+  width: 100%;
+  border-radius: 100px;
+  filter: brightness(0.8);
+
 }
