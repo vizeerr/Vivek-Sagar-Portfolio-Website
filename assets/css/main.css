@@ -1013,13 +1013,17 @@ border: 1px solid #ffffff4d;
   margin-left: 20px;
 }
 
+.scroller{
+  border-top:1px solid;
+  border-bottom:1px solid;
+}
+
 .scrollhell{
   font-size: 12em;
   text-wrap: nowrap;
   margin: 0px 0 0 0;
-  border-top:1px solid;
-  border-bottom:1px solid;
-  transform: translateX(1800px);
+ 
+  transform: translateX(1500px);
   /* background: rgb(11, 11, 11); */
   color: rgba(255, 255, 255, 0.533);
   /* mix-blend-mode: color-dodge; */
