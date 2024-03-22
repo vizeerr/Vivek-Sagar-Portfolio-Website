@@ -112,7 +112,7 @@ body{
     font-weight: 400;
   }
 
-  /*scroll container */
+  /*container */
 
   .subSection{
     background: var(--primaryBG);
@@ -1018,6 +1018,22 @@ border: 1px solid #ffffff4d;
   border-bottom:1px solid;
 }
 
+.btnsbt{
+  margin: 50px;
+  padding: 25px 40px;
+  background: #0000;
+  border-radius: 100%;
+  border: 2px solid #fff;
+  color: #fff;
+  font-size: 14px;
+  transition: 0.3s ease-in-out;
+
+}
+
+.btnsbt:hover{
+  background: #ffffff29;
+}
+
 .scrollhell{
   font-size: 12em;
   text-wrap: nowrap;
@@ -1030,22 +1046,25 @@ border: 1px solid #ffffff4d;
 }
 .contactform{
   text-align: center;
-  padding: 0 20px;
+  padding: 0 10px;
   margin: 100px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
+.contactform form {
+  width: 88%;
+}
 .contactform form p{
-  font-size: 3em;
+  font-size: 2.4em;
   margin: 0;
   display: inline-block;
   font-weight: 300;
   word-spacing: 10px;
   font-family: "Josefin Sans", sans-serif;
   line-height: 2.5em;
-  color: #d8d8d8;
+  color: #e3e3e3;
 }
 
 .contactform input{
@@ -1055,9 +1074,9 @@ border: 1px solid #ffffff4d;
   border-bottom: 2px solid #c4c4c4;
   width: 25%;
   outline: none;
-  font-size: 3em;
+  font-size: 2.4em;
   margin: 0 25px;
-  color: #ffdd00;
+  color: #ffffff;
   word-spacing: 10px;
   font-family: "Josefin Sans", sans-serif;
   font-weight: 300;
@@ -1067,7 +1086,7 @@ border: 1px solid #ffffff4d;
   font-size: 12px;
   word-spacing: 1px;
   font-weight: 400;
-  
+  color: #dadada; 
 }
 
 .footerbottom{
@@ -1076,7 +1095,7 @@ border: 1px solid #ffffff4d;
   overflow: hidden;
   border: 2px solid #5a5a5a;
   border-radius: 0px;
-  margin: 100px 0 40px 0;
+  margin: 0px 0 40px 0;
   width: 100%;
   height: 100vh;
   font-weight: 300;
