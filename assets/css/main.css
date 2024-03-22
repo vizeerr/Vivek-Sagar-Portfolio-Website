@@ -341,8 +341,11 @@ body{
   
 
   .projContainer{
+    /* position: sticky; */
+    /* top:0; */
     position: relative;
     background-image: linear-gradient(319deg,rgba(38, 0, 43, 0.103),rgba(33, 0, 82, 0.064));
+
   }
 
   .bg-circle{
@@ -788,7 +791,7 @@ animation: anileaf 15s linear infinite;
 
 .navbarpill{
   position: fixed;
-  bottom: 30px;
+  bottom: 15px;
   display: flex;
   justify-content: center;
   width: 100%;
@@ -798,11 +801,12 @@ animation: anileaf 15s linear infinite;
 .pillbar{
   display: flex;
   column-gap: 20px;
-background: rgba(0, 0, 0, 0.604);
+/* background: rgba(255, 255, 255, 0.138); */
 padding: 5px 30px;
-border-radius: 80px;
-backdrop-filter: blur(10px);
-box-shadow: 0 0 15px 0 #ffffff38;
+border-radius: 12px;
+backdrop-filter: blur(20px);
+/* box-shadow: 0 0 15px 0 #000000c0; */
+border: 1px solid #ffffff4d; 
 
 }
 .pillbar a{
@@ -1067,20 +1071,50 @@ box-shadow: 0 0 15px 0 #ffffff38;
   position: relative;
   overflow: hidden;
   border: 2px solid #5a5a5a;
-  border-radius: 50px;
-  margin: 150px 0 40px 0;
-  width: 95%;
-  height: 85vh;
+  border-radius: 0px;
+  margin: 100px 0 40px 0;
+  width: 100%;
+  height: 100vh;
   font-weight: 300;
   font-family: "Josefin Sans", sans-serif;
-  background: #ffffff1d;
+  background: #ff000019;
   backdrop-filter: blur(25px);
   display: flex;
-  justify-content: center;
+  /* justify-content: space-between; */
   align-items: center;
- 
+  flex-direction: column;
+
 }
 
 .footerbottom .nameTag{
+  font-size: 15em;
+}
+
+.upersec{
+  display: flex;
+  justify-content: space-between;
+  width: 96%;
+  align-items: flex-start;
+}
+
+.mdlsec{
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+
+.dwnsec{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 96%;
+  margin-top: 50px;
+}
+
+.tagline{
+  /* text-decoration: overline; */
+  font-size:1.5em;
+  color: #fffce7;
+  /* mix-blend-mode: color-dodge; */
 
 }

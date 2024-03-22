@@ -63,14 +63,14 @@ myFluid.activate();
             <!-- <p>MENU</p> -->
         </div>
 
-    <!-- <div class="navbarpill">
+    <div class="navbarpill">
         <div class="pillbar">
             <a href="/"><p>Home</p></a>
             <a href="/"><p>About Me</p></a>
             <a href="/"><p>What I Do</p></a>
             <a href="/"><p>Contact Me</p></a>
         </div>
-    </div> -->
+    </div>
     
     <div class="mainContainer" data-scroll-container>
         
@@ -291,7 +291,7 @@ myFluid.activate();
                     <div class="projCard">
                         <img src="/assets/images/alumni.png" alt="ALLUMNI COLLEGE">
                     </div>
-                    <div class="projCard"></div>
+                    <!-- <div class="projCard"></div> -->
       
                 </div>
             </div>
@@ -399,9 +399,32 @@ myFluid.activate();
                         
                     </div>
                     <div class="footerbottom">
+                        <div class="upersec">
+                            <p class="tagline">Software Engineer</p>
+                            <div>
+                                <p class="tagline">theviveksagar@gmail.com</p>
+                                <p class="tagline">+91 9711198899</p>
+                            </div>
+                        </div>
+                        <div class="mdlsec">
+                            <p class="nameTag">Vivek Sagar</p> 
                             
-                        <p class="nameTag">Vivek Sagar</p> 
+                            <p class="tagline">"I Just Follow My Passion Rest Is On My Art"</p>
+                        </div>   
+                        <div class="dwnsec">
+                            <p class="tagline">Linkedin</p>
+                            <p class="tagline">Github</p>
+                            <p class="tagline">Instagram</p>
+                            <p class="tagline">Medium</p>
+                            
+
+                        </div>
                    </div>
+                   <!-- <div>
+                    <img src="/assets/images/cloud2.png" width="600" alt="" srcset="">
+
+                    
+                   </div> -->
                     
                 </div>
             </div>
@@ -416,6 +439,7 @@ myFluid.activate();
         
         
     </div>
+
    
 
     
@@ -529,7 +553,6 @@ myFluid.activate();
                     end: 'top 40%',
                     scrub: true,
                 }
-
             })
             wtd.to(e, {
                 scale:1,
@@ -596,27 +619,27 @@ myFluid.activate();
             })
 
             
-            // let footerbottom = gsap.timeline({
-            //     scrollTrigger: {
-            //         trigger: '.footerbottom',
-            //         start: 'top 50%',
-            //         end: 'top 0',
-            //         scrub: 1,
-            //         markers:true,
+            let footerbottom = gsap.timeline({
+                scrollTrigger: {
+                    trigger: '.footerbottom',
+                    start: '180% 80%',
+                    end: '230% 40%',
+                    scrub: 1,
+                    // markers:true,
                     
-            //     }
+                }
 
-            // })
-            // footerbottom.to('.footerbottom', {
-            //     width:'95%',
-            //     duration: 3,
-            // })
+            })
+            footerbottom.to('.footerbottom', {
+                width:'95%',
+                height:'85vh',
+                borderRadius:'50px',
+                duration: 3,
+            })
 
             
-
-
         gsap.to('.projCard', {
-            xPercent: -100 * (document.querySelectorAll('.projCard').length - 1),
+            xPercent: -100 * (document.querySelectorAll('.projCard').length),
             ease: "none",
             scrollTrigger: {
                 trigger: ".projSnap",
@@ -628,6 +651,19 @@ myFluid.activate();
                 
             }
         })
+        
+        // gsap.to('.projContainer', {
+        //     ease: "none",
+        //     scrollTrigger: {
+        //         trigger: ".projContainer",
+        //         start:"top 0%",
+        //         // pin:true,
+        //         scrub: 1,
+        //         duration:3,
+        //         end: () => "+=" + document.querySelector(".projSnap").offsetWidth,
+                
+        //     }
+        // })
         
 
         
