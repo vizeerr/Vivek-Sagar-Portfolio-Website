@@ -1012,6 +1012,14 @@ border: 1px solid #ffffff4d;
   position: relative;
   margin-left: 20px;
 }
+.mvigcf{
+
+  display: inline-flex;
+  width: 0;
+  overflow: hidden;
+  position: relative;
+  margin:0 20px;
+}
 
 .scroller{
   border-top:1px solid;

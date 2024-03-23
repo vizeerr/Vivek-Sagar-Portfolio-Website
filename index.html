@@ -18,22 +18,22 @@
 
     <!--Main Files-->
     <link rel="stylesheet" href="assets/css/main.css">
-    <!-- <script src="/assets/js/simulate.js"></script>  -->
+    <script src="/assets/js/simulate.js"></script> 
 
 
 </head>
 
 <body>
     <!-- <canvas id="renderSurface" ></canvas> -->
-    <!-- <script>
+    <script>
     const canvas = document.getElementById('renderSurface');
     const myFluid = new Fluid(canvas);
     myFluid.mapBehaviors({
-    sim_resolution: 128,
+    sim_resolution: 225,
     dye_resolution: 512,
     paused: false,
     embedded_dither: true,
-    dissipation: .97,
+    dissipation: 0.98,
     velocity: .98,
     pressure: .8,
     pressure_iteration: 20,
@@ -44,17 +44,13 @@
     multi_color: true,
 
     render_bloom: false,
-    bloom_iterations: 8,
-    bloom_resolution: 256,
-    intensity: 0.8,
-    threshold: 0.6,
-    soft_knee: 0.7,
+    
     transparent: true
 });
 
-myFluid.activate();
+// myFluid.activate();
 
-    </script>     -->
+    </script>    
 
         <div class="navbar">
             <p>Coming Soon Under Development </p>
@@ -336,7 +332,7 @@ myFluid.activate();
             </div>
             
             <div class="certifContainer">
-                <p class="certifhead heading">⤵ Projects</p>
+                <p class="certifhead heading">⤵ More Works</p>
                 <div class="certifElem">
                     <ul>
                         <li>
@@ -388,7 +384,7 @@ myFluid.activate();
                         <p  class="scrollhell">HELLO <img src="/assets/images/hello.gif" width="230" alt="">  LET'S TALK  I'M STILL WAITING  <img src="/assets/images/wait.gif" width="230" alt="">   </p>
                     </div>
                     <div class="contactform">
-                        <h1 class="cthead">Don't BE SHY</h1>
+                        <h1 class="cthead mvheadcf">Don't BE <span class="mvigcf"> <img src="/assets/images/shy.gif"  width="140" alt="" srcset=""></span> SHY</h1>
                         <form action="">
                             <div>
                                 <p>Hii ! Vivek, my name is </p> <input type="text" name="sendername" id="sendername" placeholder="YOUR NAME">
@@ -473,6 +469,23 @@ myFluid.activate();
                 })
             })
         })
+        document.querySelectorAll('.mvheadcf').forEach((e)=>{
+
+e.addEventListener('mouseenter',()=>{
+    gsap.to('.mvigcf',{
+        duration: 1,
+        width:'130px',
+        ease: Power1
+    })
+})
+e.addEventListener('mouseleave',()=>{
+    gsap.to('.mvigcf',{
+        width:'0',
+        duration: 1,
+        ease: Power1
+    })
+})
+})
 
        
 //    TONE JS
@@ -674,6 +687,17 @@ myFluid.activate();
     const img = li.querySelector("img");
     var rotate = 0;
             var diff = 0;
+            li.addEventListener("mouseenter", (e) => {
+       
+        gsap.to(img, {
+            display:"block",
+            opacity: 1,
+            duration: 0.5,
+            ease: Power1,
+            left:e.clientX-300,
+            
+        });
+    });
     li.addEventListener("mousemove", (e) => {
         diff = e.clientX - rotate;
                 rotate = e.clientX;
@@ -683,7 +707,7 @@ myFluid.activate();
             duration: 0.5,
             ease: Power1,
             left:e.clientX-300,
-            rotate:gsap.utils.clamp(-25,25,diff)
+            rotate:gsap.utils.clamp(-15,15,diff)
         });
     });
     li.addEventListener("mouseleave", (e) => {
