@@ -1408,6 +1408,9 @@ width: 125px;
         .bg-circle{
           display: none;
         }
+        .subSection{
+          overflow: hidden;
+        }
         
 }
 
@@ -1423,6 +1426,9 @@ width: 125px;
     width: 28%;
 
     }
+    .jElement{
+      font-size: 4px;
+    }
 
     .nameTag{
       font-size: 5em;
@@ -1432,6 +1438,10 @@ width: 125px;
     .mainBanner .primImg{
       width: 220%;
      
+    }
+
+    .footerbottom{
+      display: none;
     }
     
     
