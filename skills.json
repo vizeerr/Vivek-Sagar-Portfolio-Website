@@ -1,0 +1,117 @@
+[
+    {
+        "src": "/assets/images/html.png",
+        "width": "60",
+        "alt": "HTML"
+    },
+    {
+        "src": "/assets/images/css.png",
+        "width": "60",
+        "alt": "CSS"
+    },
+    {
+        "src": "/assets/images/js.png",
+        "width": "50",
+        "alt": "JAVASCRIPT"
+    },
+    {
+        "src": "/assets/images/bootstrap.png",
+        "width": "60",
+        "alt": "BOOTSTRAP"
+    },
+    {
+        "src": "/assets/images/express.png",
+        "width": "50",
+        "alt": "EXPRESS JS"
+    },
+    {
+        "src": "/assets/images/java.png",
+        "width": "50",
+        "alt": "JAVA"
+    },
+    {
+        "src": "/assets/images/mongo.png",
+        "width": "50",
+        "alt": "MONGO DB"
+    },
+    {
+        "src": "/assets/images/php.png",
+        "width": "60",
+        "alt": "PHP"
+    },
+    {
+        "src": "/assets/images/reactjs.png",
+        "width": "60",
+        "alt": "REACT JS"
+    },
+    {
+        "src": "/assets/images/tailwind.png",
+        "width": "70",
+        "alt": "TAILWIND"
+    },
+    {
+        "src": "/assets/images/sql.png",
+        "width": "50",
+        "alt": "MYSQL"
+    },
+    {
+        "src": "/assets/images/node.png",
+        "width": "60",
+        "alt": "NODE JS"
+    },
+    {
+        "src": "/assets/images/joomla.png",
+        "width": "50",
+        "alt": "JOOMLA"
+    },
+    {
+        "src": "/assets/images/wordpress.png",
+        "width": "70",
+        "alt": "WORDPRESS"
+    },
+    {
+        "src": "/assets/images/nextjs.png",
+        "width": "60",
+        "alt": "NEXT JS"
+    },
+    {
+        "src": "/assets/images/webflow.png",
+        "width": "50",
+        "alt": "WEBFLOW"
+    },
+    {
+        "src": "/assets/images/figma.png",
+        "width": "50",
+        "alt": "FIGMA"
+    },
+    {
+        "src": "/assets/images/photoshop.png",
+        "width": "50",
+        "alt": "PHOTOSHOP"
+    },
+    {
+        "src": "/assets/images/illustrator.png",
+        "width": "50",
+        "alt": "ILLUSTRATOR"
+    },
+    {
+        "src": "/assets/images/python.png",
+        "width": "50",
+        "alt": "PYTHON"
+    },
+    {
+        "src": "/assets/images/typescript.png",
+        "width": "50",
+        "alt": "TYPESCRIPT"
+    },
+    {
+        "src": "/assets/images/firebase.png",
+        "width": "50",
+        "alt": "FIREBASE"
+    },
+    {
+        "src": "/assets/images/git.png",
+        "width": "50",
+        "alt": "GIT"
+    }
+]

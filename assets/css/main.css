@@ -144,6 +144,7 @@ body{
   .wtdContainer .mySwag ul li{
     font-size: 7em;
     margin: 80px 0;
+    width: 92%;
     color: #ffffff9b;
     filter: blur(10px);
     scale: 0.9;
@@ -197,126 +198,70 @@ body{
   .lbox,.rbox{
     z-index: 2;
   }
-  
-  .clip-svg {
-    width: 0;
-    height: 0;
+  .hexatab{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+    transition: 0.3s ease;
+    
+    
   }
-  
-  .clip-caption {
-    width: 100%;
+  .hexatab svg{
     position: absolute;
-    top: 50%;
-    -ms-transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
-    text-align: center;
-    color: #fff;
-    font-size: 13px;
-    text-transform: uppercase;
-  }
-  
-  .clip-each {
-    display: block;
-    position: relative;
-    -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-    -webkit-transition: all 0.2s ease-in;
-    transition: all 0.2s ease-in;
+    width:8.5%; 
+    transition: 0.3s ease;
     
-  
   }
-  
-  .clip-each:hover{
-    background: #fff !important;
-  }
-  
-  .clip-each:hover::after{
-    background: #fff !important;
-  }
-  
-  
-  .clip-each:hover .clip-caption{
-    
-    color: #000;
-  }
-  
-  
-  .clip-border {
-    background: rgb(222, 0, 103);
+  .hexatab svg path{
+    transition: 0.3s ease;
     animation: borderlight 15s linear infinite;
     animation-fill-mode: both;
-    width: 130px;
-    height: 140px;
-    color: #222;
+    
+    
+  }
+
+  .hexatab:hover  svg path{
+    stroke: #fff !important;
+    
   }
   
 
   
   @keyframes borderlight {
     0%{
-      background: rgb(222, 0, 103);
+      stroke: rgb(255, 0, 119);
       
     }
     15%{
-     background: rgb(194, 0, 233);
+     stroke: rgb(212, 0, 255);
      
     }
     40%{
-      background: rgb(233, 171, 0);
+      stroke: rgb(255, 187, 0);
       
     }
     60%{
-      background: rgb(0, 233, 225);
+      stroke: rgb(0, 255, 247);
     }
     80%{
-      background: rgb(0, 233, 109);
+      stroke: rgb(0, 255, 119);
     }
     100%{
-      background: rgb(222, 0, 103);
+      stroke: rgb(255, 0, 119);
     }
   }
   
-  
-  .clip-border::after {
-    content: "";
-    position: absolute;
-    top: 2%;
-    left: 2%;
-    right: 2%;
-    bottom: 2%;
-    background: black;
-    -webkit-transition: all 0.2s linear;
-    transition: all 0.2s ease-in;
-    -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-    z-index: -1;
-  }
-  
-  .item{
-    width: 38%;
-    transition: 0.2s ease-in;
-    background: #000;
-  
-  }
-  .clip-caption img{
-    transition: 0.1s ease-in;
-    pointer-events: none;
-  }
-  .clip-each:hover .clip-caption img{
-    filter: invert(1);
-  }
-  
-  .rohm{
-    display: flex;
-    /* justify-content: center; */
-    flex-wrap: wrap;
-  }
   
   .hexas{
     display: flex;
-    column-gap: 20px;
-  }
+    column-gap: 50px;
+    row-gap: 40px;
+    width: 95%;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  } 
 
   /* scroll text */
   
@@ -344,10 +289,9 @@ body{
     /* position: sticky; */
     /* top:0; */
     position: relative;
-    background-image: linear-gradient(319deg,rgba(38, 0, 43, 0.103),rgba(33, 0, 82, 0.064));
+    /* background-image: linear-gradient(319deg,rgba(38, 0, 43, 0.103),rgba(33, 0, 82, 0.064)); */
 
   }
-
   .bg-circle{
     
     background-color: rgba(255, 0, 0, 0);
@@ -568,7 +512,12 @@ body{
     display: none;
   }
 
-
+.maxele{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
 
 
 
@@ -800,22 +749,47 @@ animation: anileaf 15s linear infinite;
 
 .pillbar{
   display: flex;
-  column-gap: 20px;
-/* background: rgba(255, 255, 255, 0.138); */
-padding: 5px 30px;
-border-radius: 12px;
-backdrop-filter: blur(20px);
-/* box-shadow: 0 0 15px 0 #000000c0; */
+
+  column-gap: 8px;
+  align-items: center;
+background: rgba(252, 252, 252, 0.095);
+padding: 0px 20px;
+border-radius: 7px;
+backdrop-filter: blur(8px);
+box-shadow: 0 0 15px 0 #0000008c;
 border: 1px solid #ffffff4d; 
 
 }
-.pillbar a{
+.pillbar a,.navbox a{
   color: #fcfcfc;
   text-decoration: none;
   font-family: "Josefin Sans", sans-serif;
-  font-weight: 600;
+  font-weight: 300;
 }
 
+.navbox{
+  position: absolute;
+  bottom: 70px;
+  padding: 5px 20px;
+border-radius: 10px;
+backdrop-filter: blur(20px);
+border: 1px solid #ffffff4d; 
+
+}
+.hamburger{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 5.8px;
+}
+.burgline{
+  width: 19px;
+  height: 1px;
+  border-radius: 1px;
+  display: block;
+  background: #ffffff;
+}
 
 /* bg mesh gradient */
 
@@ -1147,5 +1121,324 @@ border: 1px solid #ffffff4d;
   font-size:1.5em;
   color: #fffce7;
   /* mix-blend-mode: color-dodge; */
+
+}
+
+
+
+@media only screen and (max-width: 1025px) {
+  .nameTag{
+    font-size: 14em;
+  }
+  .heading{
+    font-size: 4em !important;
+  }
+  .aboutContainer{
+    padding: 45px;
+  }
+  .aboutContainer p {
+    font-size: 26px;
+    line-height: 2.1em;
+  }
+
+  .wtdContainer .mySwag{
+    padding: 0;
+  }
+  .wtdContainer .mySwag ul li{
+    font-size: 5.5em;
+  }
+
+  .displayer{
+    font-size: 9em;
+  }
+  .hexas {
+    column-gap: 40px;
+    row-gap: 40px;
+  }
+
+  .hexatab svg {
+    width: 12.5%;
+  }
+
+  .projCard img {
+    width: 810px;
+  }
+  .jElement{
+    font-size: 11px;
+  }
+  .projCard{
+    height: 60vh;
+  }
+
+
+  .projector {
+    font-size: 7em;
+  }
+  
+  .certifElem ul li .elehead {
+    font-size: 3em;
+  }
+  .certifElem ul li {
+    
+    padding: 35px 0;
+  }
+
+  .certifElem ul li .img {
+    width: 420px;
+  }
+
+}
+
+
+
+
+
+
+@media only screen and (max-width: 769px){
+  .mainBanner {
+    position: relative;
+    height: 66vh;
+  }
+  .nameTag{
+    font-size: 10em;
+  }
+.jElement {
+    font-size: 9px;
+}
+.heading{
+  font-size: 3em !important;
+}
+.aboutContainer{
+  padding: 45px;
+}
+.aboutContainer p {
+  font-size: 22px;
+  line-height: 2.3em;
+}
+.wtdContainer .mySwag ul li{
+  font-size: 4em;
+  margin: 50px;
+}
+
+.hexas {
+  column-gap: 30px;
+  row-gap: 30px;
+}
+
+.hexatab svg {
+  width: 15%;
+}
+
+.scrollhead {
+  font-size: 9em;
+}
+
+
+.projCard img {
+  /* width: 350px; */
+  width: 100%;
+}
+.projCard{
+  /* height: 20vh; */
+  height: auto;
+  margin: 30px 15px ;
+}
+
+.projSnap {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 100px 0;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+
+.projector {
+  font-size: 4.5em;
+}
+.maxele{
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: start;
+}
+.certifElem {
+  padding: 39px;
+
+}
+.certifElem ul li .img{
+  width: 45%;
+  display: block;
+  position: relative;
+  opacity: 1;
+  border-radius: 7px;
+}
+
+.cthead {
+  font-size: 5em;
+}
+
+.mvigct{
+  width: 150px;
+}
+.mvigct img{
+width: 125px;
+}
+
+}
+
+@media only screen and (max-width: 426px){
+  .radialBox{
+    left: 0;
+    width: 200px;
+  }
+
+  .jElement {
+    font-size: 5px;
+    padding: 20px;
+    margin: 50px 0;
+  }
+
+  .nameTag{
+    font-size: 6em;
+  }
+  .mainBanner {
+    height: 40vh;
+  }
+  .heading{
+    font-size: 2.5em !important;
+    }
+    .aboutContainer{
+      padding: 25px;
+      }
+      .aboutContainer p {
+      font-size: 20px;
+      line-height: 2em;
+      }
+      .wtdContainer .mySwag ul{
+        padding: 0;
+      }
+  .wtdContainer .mySwag ul li{
+    font-size:2.5em;
+    width: 100%;
+    margin: 30px 0px;
+  }
+  .wtdContainer .mySwag {
+    padding: 0 30px;
+    margin: 50px 0;
+}
+.hexas {
+  column-gap: 20px;
+  row-gap: 20px;
+  }
+  .sectors {
+    padding: 0px 10px;
+  }
+  .hexatab svg {
+  width: 25%;
+  }
+  .projCard{
+    border-radius: 20px;
+  }
+  .projCard img{
+    border-radius: 20px;
+  }
+
+    .certifElem {
+    padding: 20px;
+    
+    }
+    .certifElem ul li .elehead {
+      font-size: 1.4em;
+  }
+    .certifElem ul li .img{
+    width: 45%;
+    display: block;
+    position: relative;
+    opacity: 1;
+    border-radius: 7px;
+    }
+    
+    .cthead {
+      font-size: 3em;
+      }
+
+      .cthead  img{
+        width: 50px;
+      }
+      .mvigct{
+        width: 90px;
+        }
+      .mvigct img{
+        width: 75px;
+        } 
+
+        .scrollhell{
+          font-size: 6em;
+        }
+        .scrollhell img{
+          width: 100px;
+        }
+        
+
+/* 
+
+
+
+
+.jElement {
+  font-size: 9px;
+}
+
+
+.wtdContainer .mySwag ul li{
+font-size: 4em;
+
+}
+
+
+
+.scrollhead {
+font-size: 9em;
+}
+
+
+.projCard img {
+width: 650px;
+}
+.projCard{
+height: 48vh;
+}
+
+.projector {
+font-size: 4.5em;
+}
+.maxele{
+flex-direction: column;
+flex-wrap: wrap;
+align-items: start;
+}
+.certifElem {
+padding: 39px;
+
+}
+.certifElem ul li .img{
+width: 45%;
+display: block;
+position: relative;
+opacity: 1;
+border-radius: 7px;
+}
+
+.cthead {
+font-size: 5em;
+}
+
+.mvigct{
+width: 150px;
+}
+.mvigct img{
+width: 125px;
+} */
 
 }
