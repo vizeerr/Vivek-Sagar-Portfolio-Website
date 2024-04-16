@@ -1130,12 +1130,12 @@ border: 1px solid #ffffff4d;
 
 
 .footernsection  .nameTag{
-  /* mix-blend-mode: saturation; */
+  mix-blend-mode: overlay;
   top: 0 !important;
   /* position: relative; */
   text-align: center;
+  text-shadow: none;
 
-  
 }
 
 .footernsection a{
@@ -1155,6 +1155,10 @@ border: 1px solid #ffffff4d;
 }
 .footernsection{
   width: 100%;
+}
+
+.footernsection .nameTag{
+  color: #fff;
 }
 .footertager{
   font-weight: 200;
