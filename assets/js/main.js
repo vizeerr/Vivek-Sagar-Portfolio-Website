@@ -353,20 +353,20 @@ gsap.to('.scrollhell', {
 
 
 // fotter
-let footerbottom = gsap.timeline({
-    scrollTrigger: {
-        trigger: '.footerbottom',
-        start: 'top 50%',
-        end: 'center 70%',
-        scrub: 1,
-        // markers:true,
+// let footerbottom = gsap.timeline({
+//     scrollTrigger: {
+//         trigger: '.footerbottom',
+//         start: 'top 50%',
+//         end: 'center 70%',
+//         scrub: 1,
+//         // markers:true,
         
-    }
+//     }
 
-})
-footerbottom.to('.footerbottom', {
-    width:'95%',
-    height:'85vh',
-    borderRadius:'50px',
-    duration: 3,
-})
+// })
+// footerbottom.to('.footerbottom', {
+//     width:'95%',
+//     height:'85vh',
+//     borderRadius:'30px',
+//     duration: 3,
+// })
