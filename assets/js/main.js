@@ -90,63 +90,6 @@ document.querySelectorAll(".certifElem ul li").forEach((li) => {
 
 // projects cards
 
-gsap.to('.projCard', {
-    xPercent: -100 * (document.querySelectorAll('.projCard').length),
-    ease: "none",
-    scrollTrigger: {
-        trigger: ".projSnap",
-        start:"top 25%",
-        pin:true,
-        scrub: 1,
-        duration:3,
-        end: () => "+=" + document.querySelector(".projSnap").offsetWidth,
-        
-    }
-})
-
-
-document.querySelectorAll('.projCard img').forEach((projCard)=>{
-    projCard.addEventListener('mouseover',(e)=>{
-        //  gsap.to(e.target,{
-        //      transform:"rotate3d(5, 3, -2, 55deg)",
-        //      duration: 1,
-        //      ease: Power1
-        // })
-        const namep = e.target.getAttribute('alt');
-        document.querySelector('.projector').textContent = namep;
-        gsap.to('.projector',{
-            
-            duration: 1,
-            opacity:1,
-            ease: Power1
-        })
-        gsap.to(e.target,{
-            duration: 1,
-            opacity:0.7,
-            ease: Power1
-        })
-    })
-    projCard.addEventListener('mouseout',(e)=>{
-        gsap.to('.projector',{
-            
-            duration: 1,
-            opacity:0,
-            ease: Power1
-        })
-        gsap.to(e.target,{
-            duration: 1,
-            opacity:1,
-            ease: Power1
-        })
-    })
-    // projCard.addEventListener('mouseout',(e)=>{
-    //     gsap.to(e.target,{
-    //         transform:"rotate(0)",
-    //         duration: 1,
-    //         ease: Power1
-    //     })
-    // })
-})
 
 // heading anim
 
@@ -370,3 +313,5 @@ gsap.to('.scrollhell', {
 //     borderRadius:'30px',
 //     duration: 3,
 // })
+
+
