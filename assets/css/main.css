@@ -752,12 +752,12 @@ animation: anileaf 15s linear infinite;
 
   column-gap: 8px;
   align-items: center;
-background: rgba(252, 252, 252, 0.095);
+background: rgba(252, 252, 252, 0.201);
 padding: 0px 20px;
-border-radius: 7px;
+border-radius: 30px;
 backdrop-filter: blur(8px);
-box-shadow: 0 0 15px 0 #0000008c;
-border: 1px solid #ffffff4d; 
+box-shadow: 0 0 15px 0 #00000032;
+/* border: 1px solid #ffffff4d;  */
 
 }
 .pillbar a,.navbox a{
@@ -1001,19 +1001,20 @@ border: 1px solid #ffffff4d;
 }
 
 .btnsbt{
-  margin: 50px;
-  padding: 25px 40px;
+  margin: 20px 0;
+  padding: 18px 35px;
   background: #0000;
   border-radius: 100%;
   border: 2px solid #fff;
   color: #fff;
   font-size: 14px;
   transition: 0.3s ease-in-out;
-
 }
 
 .btnsbt:hover{
-  background: #ffffff29;
+  background: #ffa7a737;
+  /* padding: 40px 10px ; */
+  scale: 1.1;
 }
 
 .scrollhell{
@@ -1027,16 +1028,38 @@ border: 1px solid #ffffff4d;
   /* mix-blend-mode: color-dodge; */
 }
 .contactform{
-  text-align: center;
+  text-align: left;
   padding: 0 10px;
   margin: 100px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  /* width: 90%; */
 }
 .contactform form {
-  width: 88%;
+  width: 100%;
+}
+
+.contactform ol{
+  list-style: none;
+  counter-reset: countstyle;
+  margin: 0;
+  padding: 0;
+}
+.contactform ol li{
+  counter-increment: countstyle;
+}
+.contactform ol li::before{
+  content: "0" counter( countstyle);
+  font-weight: bold;
+  font-size: 1rem;
+  line-height: 1;
+  margin: 10px;
+  border: 2px solid #ffffffc5;
+  padding: 8px;
+  border-radius: 50px;
+  transform: rotate(80deg);
 }
 .contactform form p{
   font-size: 2.4em;
@@ -1054,7 +1077,7 @@ border: 1px solid #ffffff4d;
   background: #0000;
   border: none;
   border-bottom: 2px solid #c4c4c4;
-  width: 25%;
+  width: 35%;
   outline: none;
   font-size: 2.4em;
   margin: 0 25px;
@@ -1380,6 +1403,19 @@ width: 125px;
 
 @media only screen and (max-width: 426px){
 
+  .contactform ol li::before{
+    content: "0" counter( countstyle);
+    font-weight: bold;
+    font-size: 0.5rem;
+    line-height: 1;
+    margin: 5px;
+    border: 1.8px solid #ffffffc5;
+    padding: 5px;
+    border-radius: 50px;
+    transform: rotate(80deg);
+    
+  }
+
   .bodyTime {
     width: 70%;
 }
@@ -1538,10 +1574,10 @@ width: 125px;
           background: #0000;
           border: none;
           border-bottom: 2px solid #c4c4c4;
-          width: 30%;
+          width: 25%;
           outline: none;
           font-size: 1.2em;
-          margin: 0 15px;
+          margin: 0 5px;
           color: #ffffff;
           word-spacing: 3px;
           font-family: "Josefin Sans", sans-serif;
@@ -1555,9 +1591,9 @@ width: 125px;
           color: #dadada; 
         }
         .btnsbt {
-          margin: 25px;
-          padding: 13px 23px;
-          font-size: 12px;
+          margin: 15px 8px ;
+          padding: 12px 22px;
+          font-size: 10px;
         }
 
         .footerbottom .nameTag {
@@ -1644,7 +1680,7 @@ width: 125px;
   }
 
   .cthead {
-    font-size: 2em;
+    font-size: 2.5em;
 }
 .cthead img {
   width: 28px;
