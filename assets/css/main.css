@@ -1159,6 +1159,8 @@ border: 1px solid #ffffff4d;
 
 .footernsection .nameTag{
   color: #fff;
+  padding: 40px 0;
+  margin: 0;
 }
 .footertager{
   font-weight: 200;
@@ -1241,6 +1243,10 @@ border: 1px solid #ffffff4d;
 
 .tagline {
     font-size: 1em;
+}
+
+.mailer{
+  font-size: 3em;
 }
 }
 
@@ -1533,12 +1539,38 @@ width: 125px;
       .tagline {
           font-size: 0.7em;
       }
-      .dwnsec{
-        margin-top: 15px;
-      }.cthiibtn{
+     .cthiibtn{
         display: none;
       }
         
+
+      .mailer{
+        font-size: 1.5em;
+        padding: 20px 0;
+      }
+      .tagline{
+        padding: 15px 0;
+      }
+      .navbarpill {
+       top: 0;
+       bottom: auto;
+    }
+    .pillbar{
+      width: 100%;
+      border-radius: 0;
+      background: transparent;
+      border: none;
+      box-shadow: none;
+      backdrop-filter: blur(3px);
+      font-size: 14px;
+      justify-content: end;
+      /* text-shadow: 0 0 0 #000; */
+      
+    }
+    .hamburger{
+      display: none;
+    }
+
 }
 
 @media only screen and (max-width: 376px){
