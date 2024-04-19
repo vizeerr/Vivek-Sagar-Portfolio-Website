@@ -27,8 +27,7 @@ navbg.to('.clsnavbtn', {
 
 
 document.getElementById('openmenu').addEventListener(('click'),()=>{
-    navbg.play();
-    
+    navbg.play(); 
 })
 
 document.getElementById('clsnavbtn').addEventListener(('click'),()=>{
