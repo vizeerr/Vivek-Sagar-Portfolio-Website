@@ -1,3 +1,40 @@
+let navbg = gsap.timeline({
+    yoyo: true,
+    paused:true,
+  });
+
+navbg.to('.navsitem', {
+    display:"block",
+    y:"100%",
+    duration: 1.2,
+    backdropFilter:"blur(20px)",
+    ease:"power4.out"
+})
+navbg.to('.navlist ul li', {
+    opacity:1,
+    x:100,
+    duration: 1.2,
+    stagger:0.2,    
+    ease:"power4.out"   
+})
+navbg.to('.clsnavbtn', {
+    opacity:1,
+    y:20,
+    duration: 1,
+    ease:"power4.out"   
+})
+
+
+
+document.getElementById('openmenu').addEventListener(('click'),()=>{
+    navbg.play();
+    
+})
+
+document.getElementById('clsnavbtn').addEventListener(('click'),()=>{
+    navbg.reverse().duration(0.9);;
+})
+
 let mm = gsap.matchMedia();
 
 
@@ -90,6 +127,63 @@ document.querySelectorAll(".certifElem ul li").forEach((li) => {
 
 // projects cards
 
+gsap.to('.projCard', {
+    xPercent: -100 * (document.querySelectorAll('.projCard').length),
+    ease: "none",
+    scrollTrigger: {
+        trigger: ".projSnap",
+        start:"top 25%",
+        pin:true,
+        scrub: 1,
+        duration:3,
+        end: () => "+=" + document.querySelector(".projSnap").offsetWidth,
+        
+    }
+})
+
+
+document.querySelectorAll('.projCard img').forEach((projCard)=>{
+    projCard.addEventListener('mouseover',(e)=>{
+        //  gsap.to(e.target,{
+        //      transform:"rotate3d(5, 3, -2, 55deg)",
+        //      duration: 1,
+        //      ease: Power1
+        // })
+        const namep = e.target.getAttribute('alt');
+        document.querySelector('.projector').textContent = namep;
+        gsap.to('.projector',{
+            
+            duration: 1,
+            opacity:1,
+            ease: Power1
+        })
+        gsap.to(e.target,{
+            duration: 1,
+            opacity:0.7,
+            ease: Power1
+        })
+    })
+    projCard.addEventListener('mouseout',(e)=>{
+        gsap.to('.projector',{
+            
+            duration: 1,
+            opacity:0,
+            ease: Power1
+        })
+        gsap.to(e.target,{
+            duration: 1,
+            opacity:1,
+            ease: Power1
+        })
+    })
+    // projCard.addEventListener('mouseout',(e)=>{
+    //     gsap.to(e.target,{
+    //         transform:"rotate(0)",
+    //         duration: 1,
+    //         ease: Power1
+    //     })
+    // })
+})
 
 // heading anim
 
@@ -111,6 +205,43 @@ const heads = document.querySelectorAll('.heading').forEach((e)=>{
     })
 })
 
+
+
+// get in touch
+
+document.querySelectorAll(".mvheadct").forEach((e) => {
+    e.addEventListener("mouseenter", () => {
+      gsap.to(".mvigct", {
+        duration: 1,
+        width: "200px",
+        ease: Power1,
+      });
+    });
+    e.addEventListener("mouseleave", () => {
+      gsap.to(".mvigct", {
+        width: "0",
+        duration: 1,
+        ease: Power1,
+      });
+    });
+  });
+  document.querySelectorAll(".mvheadcf").forEach((e) => {
+    e.addEventListener("mouseenter", () => {
+      gsap.to(".mvigcf", {
+        duration: 1,
+        width: "130px",
+        ease: Power1,
+      });
+    });
+    e.addEventListener("mouseleave", () => {
+      gsap.to(".mvigcf", {
+        width: "0",
+        duration: 1,
+        ease: Power1,
+      });
+    });
+  });
+  
 
 
 })
@@ -247,41 +378,6 @@ bgmeshsub.to('.bgmeshsub', {
 })
 
 
-// get in touch
-
-document.querySelectorAll(".mvheadct").forEach((e) => {
-  e.addEventListener("mouseenter", () => {
-    gsap.to(".mvigct", {
-      duration: 1,
-      width: "200px",
-      ease: Power1,
-    });
-  });
-  e.addEventListener("mouseleave", () => {
-    gsap.to(".mvigct", {
-      width: "0",
-      duration: 1,
-      ease: Power1,
-    });
-  });
-});
-document.querySelectorAll(".mvheadcf").forEach((e) => {
-  e.addEventListener("mouseenter", () => {
-    gsap.to(".mvigcf", {
-      duration: 1,
-      width: "130px",
-      ease: Power1,
-    });
-  });
-  e.addEventListener("mouseleave", () => {
-    gsap.to(".mvigcf", {
-      width: "0",
-      duration: 1,
-      ease: Power1,
-    });
-  });
-});
-
 
 // get in hello scroll tag
 
@@ -313,5 +409,3 @@ gsap.to('.scrollhell', {
 //     borderRadius:'30px',
 //     duration: 3,
 // })
-
-
