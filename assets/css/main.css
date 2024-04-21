@@ -1313,6 +1313,16 @@ letter-spacing: 2px;
   color: #fff;
 
 }
+
+.sticker{
+  position: absolute;
+  width: 12%;
+  filter: drop-shadow(0 0 3px rgb(255, 255, 255));
+}
+
+.stickerboard{
+  position: relative;
+}
 @media only screen and (max-width: 1025px) {
   .navsitem ul{
     font-size: 7vw;
@@ -1832,3 +1842,5 @@ width: 125px;
     
 
 }
+
+

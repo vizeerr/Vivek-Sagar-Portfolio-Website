@@ -456,7 +456,11 @@
                         </div>
 
                     </div>
-                    <p class="nameTag">Vivek Sagar</p>
+                    <div id="stickerboard">
+                        
+                        
+                        <p class="nameTag">Vivek Sagar</p>
+                    </div>
                     <div class="footertager" style=" font-size: 10px;">
 
                         <div class="dwnsec">
@@ -649,3 +653,61 @@
 </body>
 
 </html>
+
+
+
+<div class="slider-container">
+    <div class="slidersoc">
+      <img src="images/2024/03/13/whatsapp-image-2024-03-13-at-8.27.32-pm-2.jpeg" alt="Image 1">
+      <img src="images/2024/03/13/whatsapp-image-2024-03-13-at-8.27.32-pm.jpeg" alt="Image 1">
+      <img src="images/2024/03/13/whatsapp-image-2024-03-13-at-8.27.31-pm-6.jpeg" alt="Image 1">
+      <img src="images/2024/03/13/whatsapp-image-2024-03-13-at-8.27.31-pm-4.jpeg" alt="Image 1">
+      <img src="images/2024/03/13/whatsapp-image-2024-03-13-at-8.27.31-pm-3.jpeg" alt="Image 1">
+      <img src="images/2024/03/13/whatsapp-image-2024-03-13-at-8.13.09-pm.jpeg" alt="Image 1">
+      <img src="images/2024/03/13/whatsapp-image-2024-03-13-at-8.27.31-pm-2.jpeg" alt="Image 1">
+      <img src="images/2024/03/13/whatsapp-image-2024-03-13-at-8.27.31-pm-1.jpeg" alt="Image 1">
+      <img src="images/2024/03/13/whatsapp-image-2024-03-13-at-8.27.31-pm.jpeg" alt="Image 1">
+      <img src="images/2024/03/13/whatsapp-image-2024-03-13-at-8.27.30-pm-4.jpeg" alt="Image 1">
+      <img src="images/2024/03/13/whatsapp-image-2024-03-13-at-8.27.30-pm-3.jpeg" alt="Image 1">
+      <img src="images/2024/03/13/whatsapp-image-2024-03-13-at-8.27.30-pm-2.jpeg" alt="Image 1">
+      <img src="images/2024/03/13/whatsapp-image-2024-03-13-at-8.27.29-pm.jpeg" alt="Image 1">
+
+      <img src="images/2024/03/13/whatsapp-image-2024-03-13-at-8.27.30-pm-1.jpeg" alt="Image 1">
+
+      <img src="images/2024/03/13/whatsapp-image-2024-03-13-at-8.27.30-pm.jpeg" alt="Image 1">
+
+      <img src="images/2024/03/13/whatsapp-image-2024-03-13-at-8.13.10-pm.jpeg" alt="Image 1">
+
+      <img src="images/2024/03/13/whatsapp-image-2024-03-13-at-8.13.09-pm-1.jpeg" alt="Image 1">
+
+      <img src="images/2024/03/13/whatsapp-image-2024-03-13-at-8.13.08-pm-1.jpeg" alt="Image 1">
+      <img src="images/2024/03/13/whatsapp-image-2024-03-13-at-8.13.08-pm.jpeg" alt="Image 1">
+
+      <img src="images/2024/03/13/whatsapp-image-2024-03-13-at-8.13.07-pm.jpeg" alt="Image 1">
+
+
+
+    
+    </div>
+  </div>
+  
+  <script>
+    const slidersoc = document.querySelector('.slidersoc');
+  let intervalsoc;
+  
+  function startSlidersoc() {
+    intervalsoc = setInterval(() => {
+      const firstImagesoc = slidersoc.firstElementChild;
+      slidersoc.style.transition = 'transform 0.5s ease';
+      slidersoc.style.transform = 'translateX(-15.65%)';
+      setTimeout(() => {
+        slidersoc.append(firstImagesoc);
+        slidersoc.style.transition = 'none';
+        slidersoc.style.transform = 'translateX(0)';
+      }, 800);
+    }, 2000); // Adjust interval time as needed
+  }
+  
+  startSlidersoc();
+  </script>
+  

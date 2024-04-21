@@ -24,6 +24,103 @@ navbg.to('.clsnavbtn', {
     ease:"power4.out"   
 })
 
+let stckbod = document.getElementById('stickerboard');
+// stckbod.addEventListener('click',(e)=>{
+//     console.log('d');
+//     var img = document.createElement('img');
+
+// // Set the source (URL) of the image
+// img.src = 'assets/images/funnystc.png'; // Replace 'path_to_your_image.jpg' with the actual path of your image
+// img.className = "sticker"
+// stckbod.appendChild(img)
+// img.style.left = e.clientX;
+
+// })
+
+// stckbod.addEventListener('click', (e)=>{
+//     console.log('dd');
+//     const moch = document.createElement('img');
+//     moch.style.opacity = 0;
+//     const imgsrc = ['gdvibxtc','funnystc','good-vibes-onlystc','iwmstc','nbddstc','pdmstc','yostc','gnstc','hydstc','sgstc','wststc']
+//     const randomIndex = Math.floor(Math.random() * imgsrc.length);
+
+// // Use the random index to get a random element from the array
+//     const randomImage = imgsrc[randomIndex];
+
+//     moch.src = `assets/images/${randomImage}.png`;
+//     moch.className = "sticker"
+//     stckbod.appendChild(moch);
+//     moch.style.left = (e.clientX - 100) + "px";
+//     moch.style.top = (e.clientY + stckbod.offsetTop -200) + "px";
+//     var deg = Math.floor(Math.random() * (360 - 0) ) + 0;
+//     moch.style.transform= 'rotate('+deg+'deg)'; 
+    
+//     gsap.to(moch, {
+//         opacity:1,
+//         duration: 0.3,  
+//     })
+
+//     setTimeout(()=>{ 
+//         gsap.to(moch, {
+//             opacity:0,
+//             duration: 0.5   ,  
+//         })
+//         setTimeout(()=>{
+//             moch.remove();
+            
+//         },2000);
+//     },5000);
+// })
+
+stckbod.addEventListener('click', (e) => {
+    const moch = document.createElement('img');
+    moch.style.opacity = 0;
+    const imgsrc = ['gdvibxtc', 'funnystc', 'good-vibes-onlystc', 'iwmstc', 'nbddstc', 'pdmstc', 'yostc', 'gnstc', 'hydstc', 'sgstc', 'wststc'];
+    const randomIndex = Math.floor(Math.random() * imgsrc.length);
+
+    // Use the random index to get a random element from the array
+    const randomImage = imgsrc[randomIndex];
+
+    moch.src = `assets/images/${randomImage}.png`;
+    moch.className = "sticker";
+    stckbod.appendChild(moch);
+    moch.style.left = (e.clientX - 100) + "px";
+    moch.style.top = (e.clientY + stckbod.offsetTop - 200) + "px";
+    var deg = Math.floor(Math.random() * (360 - 0)) + 0;
+    moch.style.transform = 'rotate(' + deg + 'deg)';
+
+    gsap.to(moch, {
+        opacity: 1,
+        duration: 0.2,
+    });
+
+    // Animate falling effect
+
+    setTimeout(() => {
+        const initialY = parseInt(moch.style.top);
+    const gravity = 0.3; // Adjust gravity as needed
+    const duration = 1; // Adjust duration of falling
+    const contend = stckbod.offsetHeight - e.clientY + 170;
+
+    gsap.to(moch, {
+        top: initialY + contend, // Adjust distance to fall
+        duration: duration,
+        ease: "power4.in", // Adjust easing
+        onUpdate: () => {
+            const newY = parseInt(moch.style.top);
+            const newYPosition = newY + gravity * gsap.getProperty(moch, "time") ** 2;
+            moch.style.top = newYPosition + "px";
+        }
+    });
+        gsap.to(moch, {
+            opacity: 0,
+            duration: 4,
+        });
+        setTimeout(() => {
+            moch.remove();
+        }, 2000);
+    }, 5000);
+});
 
 
 document.getElementById('openmenu').addEventListener(('click'),()=>{
