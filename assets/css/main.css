@@ -5,6 +5,29 @@
     --themeCOL:#ffcf00;
 }
 
+#custCur{
+  position:fixed;
+  width:20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color:#ffffff;
+  /* border: 1px solid #ffffff; */
+  transform: translate(-44%,-44%);
+  pointer-events: none;
+  z-index: 100;
+  /* background-image: url(/assets/images/cursoreye.png); */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  /* mix-blend-mode:overlay; */
+  box-shadow: 0 0 15px 1px #ffffff;
+filter: drop-shadow(0 0 4px #ffe993);
+}
+
+body{
+cursor:none;
+}
+
 body{
     background: var(--primaryBG);
     color: var(--primCOL);
@@ -804,7 +827,7 @@ border: 1px solid #ffffff4d;
   height: 100vh;
   display: inline-flex;
   flex-direction: row;
-  z-index: -5;
+  z-index: -10;
 }
 
 .bgshape1{
@@ -826,7 +849,7 @@ border: 1px solid #ffffff4d;
   /* animation: two 10s infinite; */
   opacity: 0.8;
   filter: blur(100px);
-  background-color: rgb(255,72,173);
+  background-color: rgb(255, 72, 133);
 }
 .bgshape3{
   width:400px ;
@@ -837,6 +860,18 @@ border: 1px solid #ffffff4d;
   opacity: 0.8;
   filter: blur(100px);
   background-color: rgb(106, 255, 245);
+}
+
+.bgshape4{
+  width:400px ;
+  height: 400px;
+  border-radius: 5000px;
+  position: relative;
+  /* animation: three 10s infinite; */
+  opacity: 0.8;
+  filter: blur(100px);
+  background-color: rgba(255, 225, 106, 0.919);
+  mix-blend-mode: overlay;
 }
 
 @keyframes one {
@@ -1411,6 +1446,9 @@ letter-spacing: 2px;
 
 
 @media only screen and (max-width: 769px){
+  #custCur{
+    display: none;
+  }
   .navsitem ul{
     font-size: 8.5vw;
   }

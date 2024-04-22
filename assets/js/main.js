@@ -25,6 +25,7 @@ navbg.to('.clsnavbtn', {
 })
 
 let stckbod = document.getElementById('stickerboard');
+stckbod.in
 // stckbod.addEventListener('click',(e)=>{
 //     console.log('d');
 //     var img = document.createElement('img');
@@ -75,7 +76,7 @@ let stckbod = document.getElementById('stickerboard');
 stckbod.addEventListener('click', (e) => {
     const moch = document.createElement('img');
     moch.style.opacity = 0;
-    const imgsrc = ['gdvibxtc', 'funnystc', 'good-vibes-onlystc', 'iwmstc', 'nbddstc', 'pdmstc', 'yostc', 'gnstc', 'hydstc', 'sgstc', 'wststc'];
+    const imgsrc = ['gdvibxtc', 'funnystc', 'iwmstc', 'nbddstc', 'pdmstc', 'yostc', 'gnstc', 'hydstc', 'sgstc', 'wststc'];
     const randomIndex = Math.floor(Math.random() * imgsrc.length);
 
     // Use the random index to get a random element from the array
@@ -245,6 +246,18 @@ document.querySelectorAll('.projCard img').forEach((projCard)=>{
         //      duration: 1,
         //      ease: Power1
         // })
+        gsap.to('#custCur',{
+            
+            duration: 0.3,
+            backgroundImage: "url(/assets/images/cursoreye.png)",
+            width:100,
+            height:100,
+         
+            backgroundColor:"#ffffff16",
+            // filter:"drop"
+           boxShadow:"none",
+           backdropFilter:"blur(10px)"
+        })
         const namep = e.target.getAttribute('alt');
         document.querySelector('.projector').textContent = namep;
         gsap.to('.projector',{
@@ -260,6 +273,15 @@ document.querySelectorAll('.projCard img').forEach((projCard)=>{
         })
     })
     projCard.addEventListener('mouseout',(e)=>{
+        gsap.to('#custCur',{
+            
+            duration: 0.3,
+            backgroundImage: "none",
+            width:20,
+            height:20,
+            backgroundColor:"#fff",
+            
+        })
         gsap.to('.projector',{
             
             duration: 1,
@@ -439,6 +461,8 @@ function animateShape(shape) {
     duration: 2,
     x: randomPosition(-50, 90) + '%',
     y: randomPosition(0, 100)+ '%',
+    width:randomPosition(300, 700) + "px",
+        height:randomPosition(300, 700) + "px",
     ease: "power1.inOut"
   });
 }
@@ -453,6 +477,31 @@ changePositions();
 
 setInterval(changePositions,2000);
 
+// Import GSAP if not already included
+// import gsap from "gsap";
+
+document.addEventListener('mousemove', (e) => {
+    // console.log(e);
+
+    
+    
+    // Get the viewport width and height to adjust the animation relative to them
+    const viewportWidth = window.innerWidth;
+    const viewportHeight = window.innerHeight;
+
+    // Calculate the percentage of the mouse position relative to the viewport
+    const xPercent = (e.clientX / viewportWidth) * 100;
+    const yPercent = (e.clientY / viewportHeight) * 100;
+
+    // Smoothly move the element to the new position based on the mouse movement
+    gsap.to(".bgshape4", {
+        duration:1.3,
+        x: e.clientX-viewportWidth +200,
+        y: e.clientY - 300,
+        width:randomPosition(300, 700) + "px",
+        height:randomPosition(300, 700) + "px",
+    });
+});
 
 
 
@@ -505,3 +554,23 @@ gsap.to('.scrollhell', {
 //     borderRadius:'30px',
 //     duration: 3,
 // })
+
+
+const curr = document.getElementById('custCur');
+            
+            document.addEventListener('mousemove',(e)=>{
+            curr.style.left = e.pageX- window.scrollX + "px";
+            curr.style.top = e.pageY - window.scrollY + "px";
+        })
+//         let list = document.querySelectorAll('h4,h1')
+
+// list.forEach(element => {
+//     element.addEventListener('mouseover',()=>{
+//         document.getElementById('custCur').style.scale = 2;
+//         document.getElementById('custCur').style.transform= "translate(-50%,-30%)";
+//     })
+//     element.addEventListener('mouseout',()=>{
+//         document.getElementById('custCur').style.scale = 1;
+//         document.getElementById('custCur').style.transform= "translate(-50%,-70%)";
+//     })
+// });
