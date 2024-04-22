@@ -237,7 +237,99 @@ gsap.to('.projCard', {
         
     }
 })
+document.querySelectorAll('.projCard img, .hexatab, .certifElem ul li, .navlist ul li').forEach((e)=>{
+    e.addEventListener('mouseenter',()=>{
+        
+        gsap.to('#custCur',{
+            
+            duration: 0.3,
+            backgroundImage: "url(/assets/images/evyearrow.png)",
+            width:100,
+            height:100,
+            
+            backgroundColor:"#ffffff16",
+            // filter:"drop"
+            boxShadow:"none",
+            backdropFilter:"blur(10px)"
+        })
+    })
+    e.addEventListener('mouseleave',()=>{
+        
+        gsap.to('#custCur',{
+            
+            duration: 0.3,
+            backgroundImage: "none",
+            width:20,
+            height:20,
+            backgroundColor:"#fff",
+            
+        })
+    })
 
+})
+
+
+document.querySelectorAll('.mailer, .btnsbt,.tagline').forEach((e)=>{
+    e.addEventListener('mouseenter',()=>{
+        
+        gsap.to('#custCur',{
+            
+            duration: 0.3,
+            backgroundImage: "url(/assets/images/goto.png)",
+            width:100,
+            height:100,
+            
+            backgroundColor:"#ffffff16",
+            // filter:"drop"
+            boxShadow:"none",
+            backdropFilter:"blur(8px)"
+        })
+    })
+    e.addEventListener('mouseleave',()=>{
+        
+        gsap.to('#custCur',{
+            
+            duration: 0.3,
+            backgroundImage: "none",
+            width:20,
+            height:20,
+            backgroundColor:"#fff",
+            
+        })
+    })
+
+})
+
+document.querySelectorAll('#stickerboard').forEach((e)=>{
+    e.addEventListener('mouseenter',()=>{
+        
+        gsap.to('#custCur',{
+            
+            duration: 0.3,
+            backgroundImage: "url(/assets/images/stick.png)",
+            width:100,
+            height:100,
+            
+            backgroundColor:"#ffffff16",
+            // filter:"drop"
+            boxShadow:"none",
+            backdropFilter:"blur(8px)"
+        })
+    })
+    e.addEventListener('mouseleave',()=>{
+        
+        gsap.to('#custCur',{
+            
+            duration: 0.3,
+            backgroundImage: "none",
+            width:20,
+            height:20,
+            backgroundColor:"#fff",
+            
+        })
+    })
+
+})
 
 document.querySelectorAll('.projCard img').forEach((projCard)=>{
     projCard.addEventListener('mouseover',(e)=>{
@@ -246,18 +338,7 @@ document.querySelectorAll('.projCard img').forEach((projCard)=>{
         //      duration: 1,
         //      ease: Power1
         // })
-        gsap.to('#custCur',{
-            
-            duration: 0.3,
-            backgroundImage: "url(/assets/images/cursoreye.png)",
-            width:100,
-            height:100,
-         
-            backgroundColor:"#ffffff16",
-            // filter:"drop"
-           boxShadow:"none",
-           backdropFilter:"blur(10px)"
-        })
+        
         const namep = e.target.getAttribute('alt');
         document.querySelector('.projector').textContent = namep;
         gsap.to('.projector',{
@@ -273,15 +354,7 @@ document.querySelectorAll('.projCard img').forEach((projCard)=>{
         })
     })
     projCard.addEventListener('mouseout',(e)=>{
-        gsap.to('#custCur',{
-            
-            duration: 0.3,
-            backgroundImage: "none",
-            width:20,
-            height:20,
-            backgroundColor:"#fff",
-            
-        })
+        
         gsap.to('.projector',{
             
             duration: 1,
