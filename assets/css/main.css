@@ -24,6 +24,7 @@
 filter: drop-shadow(0 0 4px #ffe993);
 }
 
+
 body{
 cursor:none;
 }
@@ -169,10 +170,11 @@ body{
     font-size: 7em;
     margin: 80px 0;
     width: 92%;
-    color: #ffffff9b;
+    color: #ffffff;
     filter: blur(10px);
     scale: 0.9;
     font-family: "Protest Revolution", sans-serif;
+    mix-blend-mode: overlay;
   }
   .mySwag .active{
     color: #fff !important;
@@ -787,6 +789,7 @@ box-shadow: 0 0 15px 0 #00000022;
 border: 1px solid #ffffff4d; 
 
 }
+
 .pillbar a,.navbox a{
   color: #fcfcfc;
   text-decoration: none;
@@ -803,6 +806,7 @@ backdrop-filter: blur(20px);
 border: 1px solid #ffffff4d; 
 
 }
+
 .hamburger{
   display: flex;
   align-items: center;
@@ -872,6 +876,10 @@ border: 1px solid #ffffff4d;
   filter: blur(100px);
   background-color: rgba(255, 225, 106, 0.919);
   mix-blend-mode: overlay;
+}
+
+a{
+  text-decoration: none;
 }
 
 @keyframes one {
@@ -998,7 +1006,7 @@ border: 1px solid #ffffff4d;
 }
 .cthiibtn{
   padding: 5px;
-  border: 2px solid;
+  border: 2px solid #fff;
   width: 8%;
   border-radius: 50px;
   margin: 20px auto;
@@ -1215,6 +1223,7 @@ border: 1px solid #ffffff4d;
   padding: 40px 0;
   margin: 0;
 }
+
 .footernsection{
   width: 100%;
 }
@@ -1820,8 +1829,10 @@ width: 125px;
       font-size: 14px;
       justify-content: end;
       /* text-shadow: 0 0 0 #000; */
+      transition: 0.3 s ease-in-out;
       
     }
+    
     .hamburger{
       display: none;
     }

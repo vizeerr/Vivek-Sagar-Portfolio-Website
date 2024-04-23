@@ -269,7 +269,7 @@ document.querySelectorAll('.projCard img, .hexatab, .certifElem ul li, .navlist 
 })
 
 
-document.querySelectorAll('.mailer, .btnsbt,.tagline').forEach((e)=>{
+document.querySelectorAll('.mailer,.tagline').forEach((e)=>{
     e.addEventListener('mouseenter',()=>{
         
         gsap.to('#custCur',{
@@ -300,6 +300,10 @@ document.querySelectorAll('.mailer, .btnsbt,.tagline').forEach((e)=>{
 
 })
 
+
+
+
+
 document.querySelectorAll('#stickerboard').forEach((e)=>{
     e.addEventListener('mouseenter',()=>{
         
@@ -314,6 +318,38 @@ document.querySelectorAll('#stickerboard').forEach((e)=>{
             // filter:"drop"
             boxShadow:"none",
             backdropFilter:"blur(8px)"
+        })
+    })
+    e.addEventListener('mouseleave',()=>{
+        
+        gsap.to('#custCur',{
+            
+            duration: 0.3,
+            backgroundImage: "none",
+            width:20,
+            height:20,
+            backgroundColor:"#fff",
+            
+        })
+    })
+
+})
+
+
+document.querySelectorAll('.wtdContainer').forEach((e)=>{
+    e.addEventListener('mouseenter',()=>{
+        
+        gsap.to('#custCur',{
+            
+            duration: 0.3,
+            backgroundImage: "url(/assets/images/bulb.png)",
+            width:100,
+            height:100,
+            
+            backgroundColor:"#ffffff16",
+            // filter:"drop"
+            boxShadow:"none",
+            backdropFilter:"blur(5px)"
         })
     })
     e.addEventListener('mouseleave',()=>{
@@ -407,6 +443,18 @@ document.querySelectorAll(".mvheadct").forEach((e) => {
         width: "200px",
         ease: Power1,
       });
+      gsap.to('#custCur',{
+            
+        duration: 0.3,
+        backgroundImage: "url(/assets/images/fingerv.png)",
+        width:100,
+        height:100,
+        
+        backgroundColor:"#ffffff16",
+        // filter:"drop"
+        boxShadow:"none",
+        backdropFilter:"blur(10px)"
+    })
     });
     e.addEventListener("mouseleave", () => {
       gsap.to(".mvigct", {
@@ -414,6 +462,15 @@ document.querySelectorAll(".mvheadct").forEach((e) => {
         duration: 1,
         ease: Power1,
       });
+      gsap.to('#custCur',{
+            
+        duration: 0.3,
+        backgroundImage: "none",
+        width:20,
+        height:20,
+        backgroundColor:"#fff",
+        
+    })
     });
   });
   document.querySelectorAll(".mvheadcf").forEach((e) => {
