@@ -781,10 +781,10 @@ animation: anileaf 15s linear infinite;
   letter-spacing: 2px;
   column-gap: 8px;
   align-items: center;
-background: rgba(252, 252, 252, 0.153);
+background: rgba(255, 255, 255, 0.134);
 padding: 0px 20px;
 border-radius: 30px;
-backdrop-filter: blur(10px);
+backdrop-filter: blur(15px);
 box-shadow: 0 0 15px 0 #00000022;
 border: 1px solid #ffffff4d; 
 
@@ -1117,6 +1117,10 @@ a{
   font-family: "Josefin Sans", sans-serif;
   line-height: 2.5em;
   color: #e3e3e3;
+}
+
+.rcwork{
+  display: none;
 }
 
 .contactform input{
@@ -1581,9 +1585,14 @@ width: 125px;
 .tagline {
   font-size: 1em;
 }
+.rcwork{
+  display: block;
+}
 }
 
 @media only screen and (max-width: 426px){
+ 
+
   .clsnavbtn{
     font-size: 4vw;
     padding: 5px;

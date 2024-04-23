@@ -225,8 +225,8 @@
       
                 </div>
             </div>
-            <div class="certifContainer">
-                <p class="certifhead heading">⤵ Recent Works</p>
+            <div class="certifContainer rcwork">
+                <p class="certifhead heading ">⤵ Featured Works</p>
                 <div class="certifElem">
                     <ul>
                         <a href="https://tnm.mait.ac.in/"><li>
@@ -518,41 +518,41 @@
        
 //    TONE JS
         
-//         Tone.start();
+        Tone.start();
     
-//         function playiPhoneTouchSound() {
+        function playiPhoneTouchSound() {
           
-//             const synth = new Tone.Synth({
-//                 oscillator: {
-//                     type: "sine"
-//                 },
-//                 volume: -15,
-//                 envelope: {
-//                     attack: 0.001,
-//                     decay: 0.02,
-//                     sustain: 0,
-//                     release: 0.01
-//                 }
-//             }).toDestination();
-//             synth.triggerAttackRelease("C6", "16n", "+0.02");
-//         }
-//         document.querySelectorAll('.clip-each').forEach((e)=>{
-//             e.addEventListener('mouseenter',()=>{
-//                 playiPhoneTouchSound();
-//             })
-//         })
+            const synth = new Tone.Synth({
+                oscillator: {
+                    type: "sine"
+                },
+                volume: -10,
+                envelope: {
+                    attack: 0.001,
+                    decay: 0.02,
+                    sustain: 0,
+                    release: 0.01
+                }
+            }).toDestination();
+            synth.triggerAttackRelease("C6", "16n", "+0.02");
+        }
+        document.querySelectorAll('.hexatab').forEach((e)=>{
+            e.addEventListener('mouseenter',()=>{
+                playiPhoneTouchSound();
+            })
+        })
 
-//         const player = new Tone.Player({
-//     url: "/assets/audios/cinema.mp3    ", // Replace "your_audio_file.mp3" with the path to your audio file
-//     loop: true, // Loop the audio file
-//     volume: -15,
-// }).toDestination();
+        const player = new Tone.Player({
+    url: "/assets/audios/cinema.mp3    ", // Replace "your_audio_file.mp3" with the path to your audio file
+    loop: true, // Loop the audio file
+    volume: -15,
+}).toDestination();
 
-// // Start playing the audio file
-// document.addEventListener('keydown', function(event) {
-//     player.start();
-//     // Stop playing the audio file when any key is pressed (optional)
-// });
+// Start playing the audio file
+document.addEventListener('keydown', function(event) {
+    // player.start();
+    // Stop playing the audio file when any key is pressed (optional)
+});
         
         </script>
     
