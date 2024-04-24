@@ -734,7 +734,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     y:"-150%",
                     ease:"Power4.out",
                 })
-                document.querySelector('.bgmesh').style.zIndex = "-10"
+                document.querySelector('.bgforal').style.zIndex = "-10"
             
             return; // Stop further execution
         }
