@@ -704,3 +704,99 @@ const curr = document.getElementById('custCur');
 //         document.getElementById('custCur').style.transform= "translate(-50%,-70%)";
 //     })
 // });
+
+
+// document.querySelector('sp-megamenu-parent').innerHTML += `<li class="sp-menu-item"><a href="/index.php/tnm-faculty-committee">Faculty Committee</a></li>`
+
+// <script> 
+// document.querySelector('.sp-megamenu-parent').innerHTML += `<li class="sp-menu-item"><a href="https://tnm.mait.ac.in/index.php?option=com_sppagebuilder&view=page&id=71">Web Team</a></li>`</script>
+
+
+// document.querySelector('.nav-pills').innerHTML += `<li class="item-339"><a href="https://tnm.mait.ac.in/index.php?option=com_sppagebuilder&view=page&id=71">Web Team</a></li>`</script>
+document.addEventListener('DOMContentLoaded', function() {
+    const greetElement = document.querySelector('.greet'); // The greeting element
+    const progresstext = document.querySelector('.progress'); // The progress text element
+    const loader = document.querySelector('.loader'); // The loader element (if any)
+
+    const msggreet = ["Hello","नमस्ते","Hola","Bonjour","Ciao","Hallo","Jambo","Ola","Hallå","Salve","こんにちは","안녕하세요","Xin chào","Merhaba","Kia ora"];
+    const totalGreetings = msggreet.length;
+    let currentIndex = 0; // Track the current greeting
+
+    // Function to fade in and out the greeting
+    function changeGreeting() {
+        if (currentIndex >= totalGreetings) {
+            // If we've reached the end, disable the loader and exit
+
+                console.log("done");
+                // loader.style.display = 'none'; // Hide the loader
+                gsap.to(loader,{
+                    duration:1,
+                    y:"-150%",
+                    ease:"Power4.out",
+                })
+                document.querySelector('.bgmesh').style.zIndex = "-10"
+            
+            return; // Stop further execution
+        }
+
+        const currentGreeting = msggreet[currentIndex]; // Get the current greeting
+
+        // Fade out the current greeting
+        gsap.to(greetElement, {
+            opacity: 0,
+            duration: 0.1,
+            onComplete: () => {
+                // Change the text to the new greeting
+                greetElement.innerHTML = currentGreeting;
+
+                // Fade in the new greeting
+                gsap.to(greetElement, {
+                    opacity: 1,
+                    duration: 0.1,
+                    onComplete: () => {
+                        // Calculate progress percentage
+                        const progressPercentage = ((currentIndex + 1) / totalGreetings) * 100;
+                        progresstext.innerHTML = Math.floor(progressPercentage) + "%";
+
+                        currentIndex++; // Increment index
+
+                        // If not reached the end, wait before changing again
+                        if (currentIndex <= totalGreetings) {
+                            setTimeout(changeGreeting, 20);
+                        }
+                    }
+                });
+            }
+        });
+    }
+
+    // Start the animation
+    changeGreeting(); // Start the initial animation cycle
+});
+
+
+// document.addEventListener("DOMContentLoaded", () => {
+//     // Simulate an API request or any async operation
+//     let msggreet = ["Hello","नमस्ते","Hola","Bonjour","Ciao","Hallo","Jambo","Ola","Hallå","Salve","こんにちは","안녕하세요","Xin chào","Merhaba","Kia ora"]
+//     msggreet.forEach((e)=>{
+
+//         document.querySelector('.greet').innerHTML = e
+
+//     })
+
+//     // setTimeout(() => {
+//     //     hideLoader();
+//     //     showContent();
+//     // }, 3000); // Replace with your actual data loading logic and time
+
+//     function hideLoader() {
+//         // const loader = document.getElementById("loader");
+//         // loader.style.display = "none";
+//     }
+
+//     function showContent() {
+//         // const content = document.getElementById("content");
+//         // content.style.display = "block";
+//     }
+// });
+
