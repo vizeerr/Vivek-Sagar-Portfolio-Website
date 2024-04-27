@@ -544,6 +544,10 @@ scrollertext.to('.scrollhead', {
 
 // bg mesh ranom
 
+
+
+mm.add("(min-width: 769px)", () => {
+    
 gsap.set(".bgshape", { xPercent: 0, yPercent: 0 });
 
 function randomPosition(min, max) {
@@ -595,9 +599,6 @@ document.addEventListener('mousemove', (e) => {
 });
 
 
-
-mm.add("(min-width: 769px)", () => {
-
 // bg mesh 2
 
 let bgmeshsub = gsap.timeline({
@@ -630,8 +631,6 @@ document.addEventListener('DOMContentLoaded', function() {
     function changeGreeting() {
         if (currentIndex >= totalGreetings) {
             // If we've reached the end, disable the loader and exit
-
-                console.log("done");
                 // loader.style.display = 'none'; // Hide the loader
                 gsap.to(loader,{
                     duration:1,
