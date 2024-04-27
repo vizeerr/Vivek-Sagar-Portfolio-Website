@@ -596,6 +596,7 @@ document.addEventListener('mousemove', (e) => {
 
 
 
+mm.add("(min-width: 769px)", () => {
 
 // bg mesh 2
 
@@ -611,6 +612,7 @@ let bgmeshsub = gsap.timeline({
 bgmeshsub.to('.bgmeshsub', {
     opacity:1,
     duration: 1,
+})
 })
 
 
