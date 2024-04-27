@@ -1653,7 +1653,8 @@ width: 125px;
 @media only screen and (max-width: 426px){
 
   .aboutContainer{
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(0px);
+    background: #000;
   }
   .greet{
     font-size: 8.5vh;
@@ -1699,7 +1700,7 @@ width: 125px;
   .mainBanner{
     height: 100vh;
     align-items:flex-start;
-    position: sticky;
+    /* position: sticky; */
   }
   .mainBanner .primImg{
     width: 195%;
