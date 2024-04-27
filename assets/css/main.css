@@ -1658,7 +1658,7 @@ width: 125px;
     height: 100%;
     background: #00000000;
     box-shadow: none;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(10px);
   }
   .footernsection .nameTag{
     mix-blend-mode: normal;
@@ -1747,11 +1747,13 @@ width: 125px;
     mix-blend-mode: normal;
     background: #0000;
     position: relative;
+    backdrop-filter: blur(0);
     }
     .aboutContainer{
       padding: 25px;
       position: relative;
-      backdrop-filter: blur(5px);
+      backdrop-filter: blur(10px);
+      background: #0000
       }
       .aboutContainer p {
       font-size: 20px;
