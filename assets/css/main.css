@@ -1654,11 +1654,13 @@ width: 125px;
 
   .aboutContainer{
     backdrop-filter: blur(0px);
-    background: #000;
+    background: #00000000;
   }
 
   .subSection{
     height: 100%;
+    background: #00000000;
+    box-shadow: none;
   }
   .footernsection .nameTag{
     mix-blend-mode: normal;
@@ -1944,7 +1946,7 @@ width: 125px;
     margin: 80px 0 50px 0;
   }
   .bgmesh{
-    display: none;
+    /* display: none; */
   }
 }
 
