@@ -473,6 +473,7 @@ body{
     justify-content: center;
     align-items: center;
     
+    
   }
   
   .projCard img{
@@ -937,6 +938,7 @@ border: 1px solid #ffffff4d;
 
 a{
   text-decoration: none;
+  cursor: none;
 }
 
 @keyframes one {
@@ -1125,8 +1127,7 @@ a{
   font-size: 12em;
   text-wrap: nowrap;
   margin: 0px 0 0 0;
- 
-  transform: translateX(1500px);
+
   /* background: rgb(11, 11, 11); */
   color: rgba(255, 255, 255, 0.533);
   /* mix-blend-mode: color-dodge; */
@@ -1567,7 +1568,9 @@ letter-spacing: 2px;
   column-gap: 30px;
   row-gap: 30px;
 }
-
+.hexatab{
+  pointer-events: none;
+}
 .hexatab svg {
   width: 15%;
 }
@@ -1648,6 +1651,10 @@ width: 125px;
 }
 
 @media only screen and (max-width: 426px){
+
+  .aboutContainer{
+    backdrop-filter: blur(5px);
+  }
   .greet{
     font-size: 8.5vh;
     margin: 5px;
@@ -1725,8 +1732,12 @@ width: 125px;
    
   }
 
+
+
   .heading{
     font-size: 2.5em !important;
+    mix-blend-mode: normal;
+    background: #0000;
     }
     .aboutContainer{
       padding: 25px;
@@ -1742,6 +1753,8 @@ width: 125px;
     font-size:1.8em;
     width: 100%;
     margin: 30px 0px;
+    mix-blend-mode: normal;
+    filter: blur(0);
   }
   .wtdContainer .mySwag {
     padding: 0 30px;

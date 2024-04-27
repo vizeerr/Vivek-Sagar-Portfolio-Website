@@ -24,64 +24,59 @@ navbg.to('.clsnavbtn', {
     ease:"power4.out"   
 })
 
-let stckbod = document.getElementById('stickerboard');
-stckbod.in
-// stckbod.addEventListener('click',(e)=>{
-//     console.log('d');
-//     var img = document.createElement('img');
 
-// // Set the source (URL) of the image
-// img.src = 'assets/images/funnystc.png'; // Replace 'path_to_your_image.jpg' with the actual path of your image
-// img.className = "sticker"
-// stckbod.appendChild(img)
-// img.style.left = e.clientX;
+document.getElementById('openmenu').addEventListener(('click'),()=>{
+    navbg.play(); 
+})
 
-// })
+document.getElementById('clsnavbtn').addEventListener(('click'),()=>{
+    navbg.reverse().duration(0.9);;
+})
 
-// stckbod.addEventListener('click', (e)=>{
-//     console.log('dd');
-//     const moch = document.createElement('img');
-//     moch.style.opacity = 0;
-//     const imgsrc = ['gdvibxtc','funnystc','good-vibes-onlystc','iwmstc','nbddstc','pdmstc','yostc','gnstc','hydstc','sgstc','wststc']
-//     const randomIndex = Math.floor(Math.random() * imgsrc.length);
 
-// // Use the random index to get a random element from the array
-//     const randomImage = imgsrc[randomIndex];
+// initialization
+const lenis = new Lenis({
+    duration: 2,
+})
 
-//     moch.src = `assets/images/${randomImage}.png`;
-//     moch.className = "sticker"
-//     stckbod.appendChild(moch);
-//     moch.style.left = (e.clientX - 100) + "px";
-//     moch.style.top = (e.clientY + stckbod.offsetTop -200) + "px";
-//     var deg = Math.floor(Math.random() * (360 - 0) ) + 0;
-//     moch.style.transform= 'rotate('+deg+'deg)'; 
+lenis.on('scroll', ScrollTrigger.update)
+
+gsap.ticker.add((time) => {
+    lenis.raf(time * 1000)
+})
+
+gsap.ticker.lagSmoothing(0)
+
+gsap.registerPlugin(ScrollTrigger);
+ScrollTrigger.defaults({
+    toggleActions: "restart pause resume pause",
+})
+
+// main tag name 
+gsap.from(".nameTag", {
+    opacity: 0,
+    scale: 1.2,
+    duration: 2,
+})
+
+// about container bg
+
+let mm = gsap.matchMedia();
+
+mm.add("(min-width: 769px)", () => {
+
+    // sticker board
     
-//     gsap.to(moch, {
-//         opacity:1,
-//         duration: 0.3,  
-//     })
-
-//     setTimeout(()=>{ 
-//         gsap.to(moch, {
-//             opacity:0,
-//             duration: 0.5   ,  
-//         })
-//         setTimeout(()=>{
-//             moch.remove();
-            
-//         },2000);
-//     },5000);
-// })
-
+let stckbod = document.getElementById('stickerboard');
 stckbod.addEventListener('click', (e) => {
     const moch = document.createElement('img');
     moch.style.opacity = 0;
     const imgsrc = ['gdvibxtc', 'funnystc', 'iwmstc', 'nbddstc', 'pdmstc', 'yostc', 'gnstc', 'hydstc', 'sgstc', 'wststc'];
     const randomIndex = Math.floor(Math.random() * imgsrc.length);
-
+    
     // Use the random index to get a random element from the array
     const randomImage = imgsrc[randomIndex];
-
+    
     moch.src = `assets/images/${randomImage}.png`;
     moch.className = "sticker";
     stckbod.appendChild(moch);
@@ -96,7 +91,6 @@ stckbod.addEventListener('click', (e) => {
     });
 
     // Animate falling effect
-
     setTimeout(() => {
         const initialY = parseInt(moch.style.top);
     const gravity = 0.3; // Adjust gravity as needed
@@ -124,45 +118,6 @@ stckbod.addEventListener('click', (e) => {
 });
 
 
-document.getElementById('openmenu').addEventListener(('click'),()=>{
-    navbg.play(); 
-})
-
-document.getElementById('clsnavbtn').addEventListener(('click'),()=>{
-    navbg.reverse().duration(0.9);;
-})
-
-let mm = gsap.matchMedia();
-
-
-// initialization
-const lenis = new Lenis({
-    duration: 2,
-})
-
-lenis.on('scroll', ScrollTrigger.update)
-
-gsap.ticker.add((time) => {
-    lenis.raf(time * 1000)
-})
-
-gsap.ticker.lagSmoothing(0)
-
-gsap.registerPlugin(ScrollTrigger);
-        ScrollTrigger.defaults({
-            toggleActions: "restart pause resume pause",
-        })
-
-// main tag name 
-gsap.from(".nameTag", {
-    opacity: 0,
-    scale: 1.2,
-    duration: 2,
-})
-
-// about container bg
-
-mm.add("(min-width: 769px)", () => {
 
     let primImg = gsap.timeline({
         scrollTrigger: {
@@ -490,12 +445,9 @@ document.querySelectorAll(".mvheadct").forEach((e) => {
     });
   });
   
+//   about container
 
-
-})
-
-
-let atd = gsap.timeline({
+  let atd = gsap.timeline({
     scrollTrigger: {
         trigger: '.aboutContainer',
         start: 'top 80%',
@@ -511,9 +463,6 @@ atd.to('.aboutContainer', {
     color: '#fff',
     duration: 3,
 })
-
-
-
 
 
 
@@ -553,6 +502,21 @@ const blurbar = document.querySelectorAll('.mySwag ul li');
                 duration: 2,
             })
         })
+
+
+        const curr = document.getElementById('custCur');
+            
+            document.addEventListener('mousemove',(e)=>{
+            curr.style.left = e.pageX- window.scrollX + "px";
+            curr.style.top = e.pageY - window.scrollY + "px";
+})
+
+
+})
+
+
+
+
 
 
 
@@ -612,9 +576,6 @@ setInterval(changePositions,2000);
 
 document.addEventListener('mousemove', (e) => {
     // console.log(e);
-
-    
-    
     // Get the viewport width and height to adjust the animation relative to them
     const viewportWidth = window.innerWidth;
     const viewportHeight = window.innerHeight;
@@ -654,65 +615,6 @@ bgmeshsub.to('.bgmeshsub', {
 
 
 
-// get in hello scroll tag
-
-
-            
-gsap.to('.scrollhell', {
-    x:-1250,
-    duration: 35,
-    repeat: -1
-
-})
-
-
-// fotter
-// let footerbottom = gsap.timeline({
-//     scrollTrigger: {
-//         trigger: '.footerbottom',
-//         start: 'top 50%',
-//         end: 'center 70%',
-//         scrub: 1,
-//         // markers:true,
-        
-//     }
-
-// })
-// footerbottom.to('.footerbottom', {
-//     width:'95%',
-//     height:'85vh',
-//     borderRadius:'30px',
-//     duration: 3,
-// })
-
-
-const curr = document.getElementById('custCur');
-            
-            document.addEventListener('mousemove',(e)=>{
-            curr.style.left = e.pageX- window.scrollX + "px";
-            curr.style.top = e.pageY - window.scrollY + "px";
-        })
-//         let list = document.querySelectorAll('h4,h1')
-
-// list.forEach(element => {
-//     element.addEventListener('mouseover',()=>{
-//         document.getElementById('custCur').style.scale = 2;
-//         document.getElementById('custCur').style.transform= "translate(-50%,-30%)";
-//     })
-//     element.addEventListener('mouseout',()=>{
-//         document.getElementById('custCur').style.scale = 1;
-//         document.getElementById('custCur').style.transform= "translate(-50%,-70%)";
-//     })
-// });
-
-
-// document.querySelector('sp-megamenu-parent').innerHTML += `<li class="sp-menu-item"><a href="/index.php/tnm-faculty-committee">Faculty Committee</a></li>`
-
-// <script> 
-// document.querySelector('.sp-megamenu-parent').innerHTML += `<li class="sp-menu-item"><a href="https://tnm.mait.ac.in/index.php?option=com_sppagebuilder&view=page&id=71">Web Team</a></li>`</script>
-
-
-// document.querySelector('.nav-pills').innerHTML += `<li class="item-339"><a href="https://tnm.mait.ac.in/index.php?option=com_sppagebuilder&view=page&id=71">Web Team</a></li>`</script>
 document.addEventListener('DOMContentLoaded', function() {
     const greetElement = document.querySelector('.greet'); // The greeting element
     const progresstext = document.querySelector('.progress'); // The progress text element
@@ -773,30 +675,4 @@ document.addEventListener('DOMContentLoaded', function() {
     // Start the animation
     changeGreeting(); // Start the initial animation cycle
 });
-
-
-// document.addEventListener("DOMContentLoaded", () => {
-//     // Simulate an API request or any async operation
-//     let msggreet = ["Hello","नमस्ते","Hola","Bonjour","Ciao","Hallo","Jambo","Ola","Hallå","Salve","こんにちは","안녕하세요","Xin chào","Merhaba","Kia ora"]
-//     msggreet.forEach((e)=>{
-
-//         document.querySelector('.greet').innerHTML = e
-
-//     })
-
-//     // setTimeout(() => {
-//     //     hideLoader();
-//     //     showContent();
-//     // }, 3000); // Replace with your actual data loading logic and time
-
-//     function hideLoader() {
-//         // const loader = document.getElementById("loader");
-//         // loader.style.display = "none";
-//     }
-
-//     function showContent() {
-//         // const content = document.getElementById("content");
-//         // content.style.display = "block";
-//     }
-// });
 
