@@ -1656,6 +1656,13 @@ width: 125px;
     backdrop-filter: blur(0px);
     background: #000;
   }
+
+  .subSection{
+    height: 100%;
+  }
+  .footernsection .nameTag{
+    mix-blend-mode: normal;
+  }
   .greet{
     font-size: 8.5vh;
     margin: 5px;
