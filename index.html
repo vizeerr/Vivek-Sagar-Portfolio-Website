@@ -67,6 +67,7 @@
                 Namaste
             </p>
             <p class="qtygret"><i>~ Build The Diffrence</i></p>
+            <button class="loadbutton">START</button>
         </div>
         <p class="progress">090%</p>
         <!-- <div class="progressCont"> -->
@@ -82,6 +83,9 @@
 
         </div>
         </div>
+        <div class="pillbar soundbar">
+            <img class="soundstat" src="/assets/images/soundon.png" alt="">
+            </div>
         <!-- <div class="navbox">
         <a href="/"><p>Home</p></a>
             <a href="/"><p>About Me</p></a>
@@ -90,6 +94,7 @@
             
         </div> -->
     </div>
+    
 
     <div class="navsitem">
         <div class="clsnavbtn" id="clsnavbtn">
@@ -499,11 +504,6 @@
 
 
 </script>
-
-   
-
-    
-
     <!-- library -->
     <script  type="text/javascript"  src="https://cdn.jsdelivr.net/npm/sheryjs/dist/Shery.js"></script>
     <!-- anim and scroll -->
@@ -522,152 +522,6 @@
     <!-- own lib -->
     <script src="/assets/js/skills.js"></script>
     <script src="/assets/js/main.js"></script>
-
-
-
-    <script>
-       
-       
-//    TONE JS
-        
-        Tone.start();
-    
-        function playiPhoneTouchSound() {
-          
-            const synth = new Tone.Synth({
-                oscillator: {
-                    type: "sine"
-                },
-                volume: -10,
-                envelope: {
-                    attack: 0.001,
-                    decay: 0.02,
-                    sustain: 0,
-                    release: 0.01
-                }
-            }).toDestination();
-            synth.triggerAttackRelease("C6", "16n", "+0.02");
-        }
-        document.querySelectorAll('.hexatab').forEach((e)=>{
-            e.addEventListener('mouseenter',()=>{
-                playiPhoneTouchSound();
-            })
-        })
-
-        const player = new Tone.Player({
-    url: "/assets/audios/cinema.mp3    ", // Replace "your_audio_file.mp3" with the path to your audio file
-    loop: true, // Loop the audio file
-    volume: -15,
-}).toDestination();
-
-// Start playing the audio file
-document.addEventListener('keydown', function(event) {
-    // player.start();
-    // Stop playing the audio file when any key is pressed (optional)
-});
-        
-        </script>
-    
-    <!-- Lenis -->
-
-    
-       
-    
-
-    <!-- gsap -->
-    <script>
-        
-        
-
-        
-        
-
-            
-
-
-            
-            
-
-            
-        
-    
-        
-
-    
-
-
-            // let lste1 = gsap.timeline({
-            //     scrollTrigger: {
-            //         trigger: '.aboutContainer',
-            //         start: 'top 90%',
-            //         end: 'top 0%',
-            //         scrub: true,
-                    
-            //     }
-
-            
-            // lste1.to('.lset1', {
-            //     transform:"translate(500px)",
-            //     duration: 3,
-            // })
-            // let lste2 = gsap.timeline({
-            //     scrollTrigger: {
-            //         trigger: '.aboutContainer',
-            //         start: 'top 90%',
-            //         end: 'top 0%',
-            //         scrub: true,
-                    
-            //     }
-
-            // })
-            // lste2.to('.lset2', {
-            //     transform:"translate(-500px)",
-            //     duration: 3,
-            // })
-            // let lste3 = gsap.timeline({
-            //     scrollTrigger: {
-            //         trigger: '.aboutContainer',
-            //         start: 'top 90%',
-            //         end: 'top 0%',
-            //         scrub: true,
-                    
-            //     }
-
-            // })
-            // lste3.to('.lset3', {
-            //     transform:"translateY(500px)",
-            //     duration: 3,
-            // })
-            // gsap.from('.lset1',{
-            //     transform:"translate(-500px)",
-            //     duration: 1,
-            // })
-            // gsap.from('.lset2',{
-            //     transform:"translate(500px)",
-            //     duration: 1,
-            // })
-            // gsap.from('.lset3',{
-            //     transform:"translateY(500px)",
-            //     duration: 1,
-            // })
-            
-            
-
-            
-            
-
-            
-
-
-
-           
-
-
-  
-    </script>
-
-
-
 </body>
 
 </html>

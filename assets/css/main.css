@@ -6,19 +6,42 @@
 }
 
 .loader{
-  background: #000;
+  background: #00000000;
 
   width: 100%;
   height: 100vh;
   position: fixed;
-  z-index: 80;
+  z-index: 82;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0px 20px 100px 100px #000;
+  /* box-shadow: 0px 20px 100px 100px #000; */
+  backdrop-filter: blur(8px);
 }
 
+.loadbutton{
+  background: #ffffff;
+  
+  padding: 10px 22px;
+  letter-spacing: 2px;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400;
+    font-size: 1.8vh;
+    margin: 20px 0 0 0;
+    color: #000000;
+    border: 1px solid #fff;
+    border-radius: 30px;
+    transition: 0.3s ease-in-out;
+    position: relative;
+    opacity: 0;
+}
+
+
+.loadbutton:hover{
+  background: #ffffff00;
+  color: #fff;
+}
 #custCur{
   position:fixed;
   width:20px;
@@ -828,6 +851,7 @@ animation: anileaf 15s linear infinite;
   width: 100%;
   z-index: 8;
   cursor: pointer;
+  column-gap: 15px;
 }
 
 .pillbar{
@@ -844,6 +868,14 @@ backdrop-filter: blur(15px);
 box-shadow: 0 0 15px 0 #00000022;
 border: 1px solid #ffffff4d; 
 
+}
+
+.soundstat{
+  width: 25px;
+}
+
+.soundbar{
+  padding: 15px;
 }
 
 .pillbar a,.navbox a{
@@ -890,6 +922,7 @@ border: 1px solid #ffffff4d;
   display: inline-flex;
   flex-direction: row;
   z-index: -10;
+  background: #000;
 }
 
 .bgshape1{
@@ -933,7 +966,7 @@ border: 1px solid #ffffff4d;
   opacity: 0.8;
   filter: blur(100px);
   background-color: rgba(255, 225, 106, 0.919);
-  mix-blend-mode: overlay;
+  /* mix-blend-mode: overlay; */
 }
 
 a{
@@ -1512,11 +1545,10 @@ letter-spacing: 2px;
 }
 
 
-
-
-
-
 @media only screen and (max-width: 769px){
+  .soundbar{
+    display: none;
+  }
   #custCur{
     display: none;
   }

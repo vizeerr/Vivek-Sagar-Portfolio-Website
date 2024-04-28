@@ -622,8 +622,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const greetElement = document.querySelector('.greet'); // The greeting element
     const progresstext = document.querySelector('.progress'); // The progress text element
     const loader = document.querySelector('.loader'); // The loader element (if any)
+    const loadbtn = document.querySelector('.loadbutton')
 
-    const msggreet = ["Hello","नमस्ते","Hola","Bonjour","Ciao","Hallo","Jambo","Ola","Hallå","Salve","こんにちは","안녕하세요","Xin chào","Merhaba","Kia ora"];
+    const msggreet = ["Hello","नमस्ते","Hola","Bonjour","Ciao","Hallo","Jambo","Ola","Hallå","Salve","こんにちは","안녕하세요","Xin chào","Merhaba","Kia ora","Welcome"];
     const totalGreetings = msggreet.length;
     let currentIndex = 0; // Track the current greeting
 
@@ -632,12 +633,32 @@ document.addEventListener('DOMContentLoaded', function() {
         if (currentIndex >= totalGreetings) {
             // If we've reached the end, disable the loader and exit
                 // loader.style.display = 'none'; // Hide the loader
-                gsap.to(loader,{
+                // gsap.to(loader,{
+                //     duration:1.5,
+                //     y:"-150%",
+                //     ease:"Power4.out",
+                // })
+                gsap.to(loadbtn,{
                     duration:1,
-                    y:"-150%",
-                    ease:"Power4.out",
+                    opacity:1,
+                    
                 })
+                loadbtn.addEventListener('click',()=>{
+                    gsap.to(loader,{
+                            duration:1.5,
+                            y:"-150%",
+                            ease:"Power4.out",
+                        })
+                        
                 document.querySelector('.bgforal').style.zIndex = "-10"
+                document.querySelectorAll('.bgmesh').forEach((e)=>{
+                    e.style.background = "#0000"
+                    
+                })
+                updateSoundbox();
+
+                })
+                
             
             return; // Stop further execution
         }
@@ -675,5 +696,64 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Start the animation
     changeGreeting(); // Start the initial animation cycle
+
+
+    // Tone.start();
+    
+        function playiPhoneTouchSound() {
+          
+            const synth = new Tone.Synth({
+                oscillator: {
+                    type: "sine"
+                },
+                volume: -10,
+                envelope: {
+                    attack: 0.001,
+                    decay: 0.02,
+                    sustain: 0,
+                    release: 0.01
+                }
+            }).toDestination();
+            synth.triggerAttackRelease("C6", "16n", "+0.02");
+        }
+
+        document.querySelectorAll('.hexatab, .projCard, .certifElem ul li').forEach((e)=>{
+            e.addEventListener('mouseenter',()=>{
+                playiPhoneTouchSound();
+            })
+        })
+
+        const player = new Tone.Player({
+            url: "/assets/audios/Oscure.mp3", // Replace "your_audio_file.mp3" with the path to your audio file
+            loop: true, // Loop the audio file
+            volume: -8,
+        }).toDestination();
+
+
+const soundbox = document.querySelector('.soundstat');
+
+let soundState = localStorage.getItem("vivekportsound") || "true";
+
+const updateSoundbox = () => {
+    if (soundState === "true") {
+        soundbox.src = "/assets/images/soundon.png";
+        player.start();
+        
+    } else {
+        soundbox.src = "/assets/images/sound off.png";
+        player.stop();
+    }
+};
+// Add click event listener to toggle the sound state
+soundbox.addEventListener('click', () => {
+    // Toggle the sound state
+    soundState = (soundState === "true") ? "false" : "true";
+
+    // Update the soundbox image and localStorage
+    updateSoundbox();
+    localStorage.setItem("vivekportsound", soundState);
+});
+
+
 });
 
