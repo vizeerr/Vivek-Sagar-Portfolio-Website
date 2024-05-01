@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>~ Vivek Sagar</title>
+
+    <!-- library -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sheryjs/dist/Shery.css" />
+    
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fleur+De+Leah&family=Protest+Revolution&family=Lobster&family=Marcellus&family=Amita:wght@400;700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Poiret+One&display=swap"
+        rel="stylesheet">
+
+
+    <!--Main Files-->
+    <link rel="stylesheet" href="assets/css/main.css">
+
+</head>
+
+<body>
+    <div class="bgmesh bgforal justify-content-center d-inline-flex flex-row " >
+        <div class="bgshape bgshape1"></div>
+        <div class="bgshape bgshape2"></div>
+        <div class="bgshape bgshape3"></div>
+        <div class="bgshape bgshape4"></div>
+
+    </div>
+
+    <div class="ContactContainer">  
+        <h1 class="cthead mvheadcf">Thank<span class="mvigct"><img src="/assets/images/thanks.gif" width="140" alt="" srcset=""></span>You </h1>
+        <h1 class="cthead mvheadcf">For Contacting Me </h1>
+
+        <p class="cthiibtn"><a href="/">Go back</a></p>
+    </div>
+
+    <div id="custCur"></div>
+
+    <script src="assets/js/jquery-3.6.4.min.js"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.35/dist/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script>
+
+        
+document.querySelectorAll(".mvheadcf").forEach((e) => {
+    e.addEventListener("mouseenter", () => {
+      gsap.to(".mvigct", {
+        duration: 1,
+        width: "200px",
+        ease: Power1,
+      });
+      
+    });
+    e.addEventListener("mouseleave", () => {
+      gsap.to(".mvigct", {
+        width: "0",
+        duration: 1,
+        ease: Power1,
+      });
+      
+    });
+  });
+  const curr = document.getElementById('custCur');
+            
+            document.addEventListener('mousemove',(e)=>{
+            curr.style.left = e.pageX- window.scrollX + "px";
+            curr.style.top = e.pageY - window.scrollY + "px";
+})
+
+let mm = gsap.matchMedia();
+
+mm.add("(min-width: 769px)", () => {
+    
+    gsap.set(".bgshape", { xPercent: 0, yPercent: 0 });
+    
+    function randomPosition(min, max) {
+      return Math.random() * (max - min) + min;
+    }
+    
+    function animateShape(shape) {
+      gsap.to(shape, {
+        duration: 2,
+        x: randomPosition(-50, 90) + '%',
+        y: randomPosition(0, 100)+ '%',
+        width:randomPosition(300, 700) + "px",
+            height:randomPosition(300, 700) + "px",
+        ease: "power1.inOut"
+      });
+    }
+    
+    function changePositions() {
+      animateShape(".bgshape1");
+      animateShape(".bgshape2");
+      animateShape(".bgshape3");
+    }
+    
+    changePositions();
+    
+    setInterval(changePositions,2000);
+    
+    // Import GSAP if not already included
+    // import gsap from "gsap";
+    
+    document.addEventListener('mousemove', (e) => {
+        // console.log(e);
+        // Get the viewport width and height to adjust the animation relative to them
+        const viewportWidth = window.innerWidth;
+        const viewportHeight = window.innerHeight;
+    
+        // Calculate the percentage of the mouse position relative to the viewport
+        const xPercent = (e.clientX / viewportWidth) * 100;
+        const yPercent = (e.clientY / viewportHeight) * 100;
+    
+        // Smoothly move the element to the new position based on the mouse movement
+        gsap.to(".bgshape4", {
+            duration:1.3,
+            x: e.clientX-viewportWidth +200,
+            y: e.clientY - 300,
+            width:randomPosition(300, 700) + "px",
+            height:randomPosition(300, 700) + "px",
+        });
+    });
+})
+    
+    </script>
+
+
+</body>
+</html>
+

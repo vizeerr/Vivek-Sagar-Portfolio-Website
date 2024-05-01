@@ -425,7 +425,9 @@
                     </div>
                     <div class="contactform">
                         <h1 class="cthead mvheadcf">Don't BE <span class="mvigcf"> <img src="/assets/images/shy.gif"  width="140" alt="" srcset=""></span> SHY</h1>
-                        <form action="/sendmail.php" method="post">
+                        <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+                            <input type="hidden" name="access_key" value="683c449a-c206-4f20-8026-13969f327640">
+                            <input type="hidden" name="redirect" value="http://localhost:5501/thanks.html">
                             <ol>
 
                                 <li class="lined">

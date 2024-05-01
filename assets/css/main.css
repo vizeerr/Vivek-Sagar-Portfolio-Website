@@ -1105,6 +1105,14 @@ a{
   text-align: center;
   transition: 0.3s ease-in-out;
 }
+
+.cthiibtn a{
+  color: #fff;
+  transition: 0.3s ease-in-out;
+}
+.cthiibtn:hover  a{
+  color: #000000;
+}
 .cthiibtn:hover{
   background: #fff;
   color: #000;
@@ -1461,6 +1469,25 @@ letter-spacing: 2px;
 
 .stickerboard{
   position: relative;
+}
+
+
+.ContactContainer{
+
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;  
+  height: 100vh;
+}
+
+.ContactContainer h1{
+  text-wrap: wrap;
+  font-size: 12vh;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  margin: 15px;
 }
 @media only screen and (max-width: 1025px) {
   .navsitem ul{
