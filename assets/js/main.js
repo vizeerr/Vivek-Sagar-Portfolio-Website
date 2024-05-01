@@ -633,11 +633,21 @@ document.addEventListener('DOMContentLoaded', function() {
         if (currentIndex >= totalGreetings) {
             // If we've reached the end, disable the loader and exit
                 // loader.style.display = 'none'; // Hide the loader
-                // gsap.to(loader,{
-                //     duration:1.5,
-                //     y:"-150%",
-                //     ease:"Power4.out",
-                // })
+                mm.add("(max-width: 769px)", () => {
+                    gsap.to(loader,{
+                        duration:1.5,
+                        y:"-150%",
+                        ease:"Power4.out",
+                    })
+                    document.querySelector('.bgforal').style.zIndex = "-10"
+                    document.querySelectorAll('.bgmesh').forEach((e)=>{
+                    e.style.background = "#0000"
+                    
+                })
+
+                })
+                
+                
                 gsap.to(loadbtn,{
                     duration:1,
                     opacity:1,
@@ -719,7 +729,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         document.querySelectorAll('.hexatab, .projCard, .certifElem ul li').forEach((e)=>{
             e.addEventListener('mouseenter',()=>{
-                playiPhoneTouchSound();
+                playiPhoneTouchSound(); 
             })
         })
 
