@@ -32,11 +32,29 @@ document.getElementById('openmenu').addEventListener(('click'),()=>{
 document.getElementById('clsnavbtn').addEventListener(('click'),()=>{
     navbg.reverse().duration(0.9);;
 })
-
+document.querySelectorAll('.nav-menu li').forEach((menuItem) => {
+    menuItem.addEventListener('click', (event) => {
+      event.preventDefault(); // Prevent default behavior
+  
+      const targetId = menuItem.getAttribute('data-target'); // Get the target section ID from `data-target`
+      console.log(targetId);
+      const targetElement = document.querySelector(targetId); // Get the target element
+      console.log(targetElement);
+      if (targetElement) {
+        lenis.scrollTo(targetElement, {
+          offset: 0, // Optional offset from the top
+          duration: 1, // Duration for the smooth scroll
+          easing: (t) => t ** 3, // Optional custom easing
+        });
+      }
+    });
+  });
 
 // initialization
 const lenis = new Lenis({
     duration: 2,
+    // infinite: true,
+    smooth: true,
 })
 
 lenis.on('scroll', ScrollTrigger.update)
@@ -53,11 +71,6 @@ ScrollTrigger.defaults({
 })
 
 // main tag name 
-gsap.from(".nameTag", {
-    opacity: 0,
-    scale: 1.2,
-    duration: 2,
-})
 
 // about container bg
 
@@ -130,7 +143,7 @@ stckbod.addEventListener('click', (e) => {
         }
     
     })
-    primImg.to('.primImg', {
+    primImg.to('.mainPrimImg', {
         opacity:0,
         duration: 3,
     })
@@ -642,8 +655,13 @@ document.addEventListener('DOMContentLoaded', function() {
                     document.querySelector('.bgforal').style.zIndex = "-10"
                     document.querySelectorAll('.bgmesh').forEach((e)=>{
                     e.style.background = "#0000"
-                    
-                })
+
+                    })
+                    gsap.from(".nameTag", {
+                        opacity: 0,
+                        scale: 1.2,
+                        duration: 2,
+                    })
 
                 })
                 
@@ -659,6 +677,12 @@ document.addEventListener('DOMContentLoaded', function() {
                             y:"-150%",
                             ease:"Power4.out",
                         })
+                        gsap.from(".nameTag", {
+                            opacity: 0,
+                            scale: 1.2,
+                            duration: 2,
+                        })
+                        
                         
                 document.querySelector('.bgforal').style.zIndex = "-10"
                 document.querySelectorAll('.bgmesh').forEach((e)=>{
@@ -767,3 +791,4 @@ soundbox.addEventListener('click', () => {
 
 });
 
+// write a code for add sum 

@@ -875,7 +875,7 @@ border: 1px solid #ffffff4d;
 }
 
 .soundbar{
-  padding: 15px;
+  padding: 11px;
 }
 
 .pillbar a,.navbox a{
@@ -1390,8 +1390,18 @@ a{
   padding: 0;
   opacity: 0;
   cursor: pointer;
+  transition: 0.2s ease-in-out;
+  border-bottom: 2px solid #ffffff00;
 
 }
+
+.navsitem ul li:hover{
+  border-bottom: 2px solid #fff;
+
+}
+
+
+
 .navsitem ul li::before{
   content: "0" counter( arrowstyle);
   font-weight: bold;
@@ -1489,6 +1499,8 @@ letter-spacing: 2px;
   font-weight: 300;
   margin: 15px;
 }
+
+
 @media only screen and (max-width: 1025px) {
   .navsitem ul{
     font-size: 7vw;
@@ -2060,5 +2072,6 @@ width: 125px;
     
 
 }
+
 
 
