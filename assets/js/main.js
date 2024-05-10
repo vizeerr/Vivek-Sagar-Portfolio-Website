@@ -682,9 +682,9 @@ document.addEventListener('DOMContentLoaded', function() {
                             scale: 1.2,
                             duration: 2,
                         })
+                        document.querySelector('.bgforal').style.zIndex = "-10"
                         
                         
-                document.querySelector('.bgforal').style.zIndex = "-10"
                 document.querySelectorAll('.bgmesh').forEach((e)=>{
                     e.style.background = "#0000"
                     
