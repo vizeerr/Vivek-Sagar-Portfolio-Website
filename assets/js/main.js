@@ -37,9 +37,9 @@ document.querySelectorAll('.nav-menu li').forEach((menuItem) => {
       event.preventDefault(); // Prevent default behavior
   
       const targetId = menuItem.getAttribute('data-target'); // Get the target section ID from `data-target`
-      console.log(targetId);
+     
       const targetElement = document.querySelector(targetId); // Get the target element
-      console.log(targetElement);
+      document.getElementById('clsnavbtn').click();
       if (targetElement) {
         lenis.scrollTo(targetElement, {
           offset: 0, // Optional offset from the top
