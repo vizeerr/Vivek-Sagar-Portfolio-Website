@@ -946,8 +946,9 @@ border: 1px solid #ffffff4d;
   /* animation: one 10s infinite; */
   opacity: 0.8;
   filter: blur(100px);
-  -webkit-filter: blur(100px);
+  -webkit-filter: blur(100px);  
   background-color: rgb(204, 0, 255);
+  border: 5px solid #ffffff;
 }
 
 .bgshape2{
